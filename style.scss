@@ -188,6 +188,17 @@ $padding--XXL: 6rem;
       }
     }
     &__icon-wrapper {
+        padding-block: $padding--XXL;
+    }
+    &__icon-single {
+        padding: $padding--M;        
+        &--title {
+            @include body($fw--bold, uppercase, $color--main);
+            margin-top: $padding--L;
+        }
+        &--descr {
+            @include body($fw--regular, unset, black);
+        }
     }
   }
 }
@@ -221,6 +232,13 @@ $padding--XXL: 6rem;
             &--title {
             width: 32ch;
         } 
+        }
+        &__icon-wrapper {
+            @include flex(row, center);
+            padding: unset;
+        }
+        &__icon-single--title {
+            height: 3.5rem;
         }
     }
   }
