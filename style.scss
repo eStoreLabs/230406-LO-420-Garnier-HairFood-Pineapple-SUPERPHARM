@@ -1,5 +1,5 @@
 // import Montserrat
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 // color variables
 $color--main: #f08365;
@@ -7,22 +7,36 @@ $color--shadow: #a66161;
 $color--accent: #0f6848;
 
 // font variables
-$ff--montserrat: 'Montserrat', 'DejaVu Sans', 'Verdana', sans-serif;
+$ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
 $fw--regular: 400;
 $fw--bold: 700;
 $ft--italic: italic;
-$fs__heading--top: clamp(1.75rem, 1.4737rem + 1.2632vw, 2.5rem); //28px - 40px, test it
+$fs__heading--top: clamp(
+  1.75rem,
+  1.4737rem + 1.2632vw,
+  2.5rem
+); //28px - 40px, test it
 $fs__heading--bottom: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem); //32px - 60 px
 $fs__body: clamp(1rem, 0.9539rem + 0.2105vw, 1.125rem); //16-18px
 $txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 
+// utility variables
+// images
+$file-path: "./img/";
+$img-format: ".png";
+
+// padding
+$padding--S: 0.5rem;
+$padding--M: 1rem;
+
+
 // typography mixins
 @mixin body($fw, $case, $color) {
-    font-family: $ff--montserrat;
-    font-weight: $fw;
-    font-size: $fs__body;
-    text-transform: $case;
-    color: $color;
+  font-family: $ff--montserrat;
+  font-weight: $fw;
+  font-size: $fs__body;
+  text-transform: $case;
+  color: $color;
 }
 
 // @mixin body--bold {
@@ -31,13 +45,19 @@ $txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 //     font-size: $fs__body;
 // }
 
-@mixin heading ($fs, $color) {
-    font-family: $ff--montserrat;
-    font-weight: $fw--bold;
-    text-transform: uppercase;
-    font-size: $fs;
-    color: $color;
-    //add outline effect
+@mixin heading($fs, $color) {
+  font-family: $ff--montserrat;
+  font-weight: $fw--bold;
+  text-transform: uppercase;
+  font-size: $fs;
+  color: $color;
+  //add outline effect
+}
+
+@mixin flex($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
 }
 
 // @mixin heading--bottom {
@@ -47,37 +67,78 @@ $txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 // }
 
 @mixin bg-cover($position) {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: $position;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $position;
 }
 
-
-
-
 #es-RC-container {
-    font-family: $ff--montserrat;
-    .es-hero {
-        background-image: url('./img/bg-hero.png');
-        @include bg-cover (left bottom);
+  font-family: $ff--montserrat;
+  //reset
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  // reset end
+  .es-hero {
+    &__left {
+      background-image: url("#{$file-path}bg-hero-L#{$img-format}");
+      @include bg-cover(left bottom);
+      @include flex(column, center);
+      color: white;
+      text-transform: uppercase;
+      font-weight: $fw--bold;
+      padding: $padding--M;
+      &--logo {
+        max-width: 200px;
+        margin-inline: auto;
+      }
+      &--new {
+        background-color: $color--accent;
+        max-width: fit-content;
+        padding: 0.2rem;
+        transform: rotate(355deg) skew(-5deg, 0deg);
+      }
+      &--title {
+        //@include heading ($fs__heading--bottom, white);
+        //font-size: clamp(2.25rem, 1.6053rem + 2.9474vw, 4rem);
+        font-size: clamp(2.5rem, 1.8553rem + 2.9474vw, 4.25rem);
+        min-width: 10ch;
+        text-shadow: $txt-shadow;
+      }
+      &--subtitle {
+        //@include heading ($fs__heading--bottom, white);
+        font-size: clamp(1.125rem, 0.9868rem + 0.6316vw, 1.5rem);
+        text-shadow: $txt-shadow;
+        text-align: center;
+      }
+    }
+    &__middle {
+      background-image: url("#{$file-path}bg-hero-R#{$img-format}");
+      @include bg-cover(right bottom);
+    }
+  }
+}
+
+// tablet styles
+@media screen and (min-width: 601px) {
+    #es-RC-container {
+        .es-hero {
+        @include flex(row, flex-end);
         &__left {
-            &--new {
-                text-transform: uppercase;
-                background-color: $color--accent;
-                max-width: fit-content;
-                padding: 0.2rem;
-                color: white;
-                font-weight: $fw--bold;
-                transform: rotate(355deg) skew(-5deg, 0deg);
-            }
-            &--title {
-                //@include heading ($fs__heading--bottom, white);
-                text-shadow: $txt-shadow;
-            }
-            &--subtitle {
-                //@include heading ($fs__heading--bottom, white);
-                text-shadow: $txt-shadow;
-            }
+            flex-basis: 40%;
+        }
+        &__middle {
+            flex-basis: 60%;
+        }
         }
     }
 }
