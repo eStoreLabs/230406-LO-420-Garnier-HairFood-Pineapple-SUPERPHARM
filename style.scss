@@ -157,11 +157,13 @@ $padding--XXL: 6rem;
     text-align: center;
     &__header {
       position: relative;
+      margin-bottom: $padding--XXL;
       &--container {
         border: 2px solid $color--main;
         border-radius: 8px;
         padding: $padding--L;
         padding-bottom: $padding--XXL;
+        
       }
       &--subtitle {
         @include heading($fs__body, $color--main);
@@ -175,6 +177,7 @@ $padding--XXL: 6rem;
       position: absolute;
       left: 50%;
     transform: translate(-50%, -30%);
+    
       &--title {
         @include heading($fs__heading--top, $color--main);
       }
@@ -183,6 +186,8 @@ $padding--XXL: 6rem;
         @include heading($fs__heading--bottom, white);
         text-shadow: $txt-stroke--main;
       }
+    }
+    &__icon-wrapper {
     }
   }
 }

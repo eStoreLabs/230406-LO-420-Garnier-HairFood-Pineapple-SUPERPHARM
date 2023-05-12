@@ -97,6 +97,7 @@
 }
 #es-RC-container .es-benefits__header {
   position: relative;
+  margin-bottom: 6rem;
 }
 #es-RC-container .es-benefits__header--container {
   border: 2px solid #f08365;
@@ -136,7 +137,6 @@
   color: white;
   text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
 }
-
 @media screen and (min-width: 601px) {
   #es-RC-container .es-hero {
     display: flex;
