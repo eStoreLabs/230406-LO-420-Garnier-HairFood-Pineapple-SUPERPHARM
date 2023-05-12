@@ -2,39 +2,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 // color variables
-$color--accent: #f08365;
+$color--main: #f08365;
 $color--shadow: #a66161;
+$color--accent: #0f6848;
 
 // font variables
 $ff--montserrat: 'Montserrat', 'DejaVu Sans', 'Verdana', sans-serif;
 $fw--regular: 400;
 $fw--bold: 700;
+$ft--italic: italic;
 $fs__heading--top: clamp(1.75rem, 1.4737rem + 1.2632vw, 2.5rem); //28px - 40px, test it
 $fs__heading--bottom: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem); //32px - 60 px
 $fs__body: clamp(1rem, 0.9539rem + 0.2105vw, 1.125rem); //16-18px
+$txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 
 // typography mixins
-@mixin body--regular {
+@mixin body($fw, $case, $color) {
     font-family: $ff--montserrat;
-    font-weight: $fw--regular;
+    font-weight: $fw;
     font-size: $fs__body;
+    text-transform: $case;
+    color: $color;
 }
 
-@mixin body--bold {
-    font-family: $ff--montserrat;
-    font-weight: $fw--bold;
-    font-size: $fs__body;
-}
+// @mixin body--bold {
+//     font-family: $ff--montserrat;
+//     font-weight: $fw--bold;
+//     font-size: $fs__body;
+// }
 
-@mixin heading--top {
+@mixin heading ($fs, $color) {
     font-family: $ff--montserrat;
     font-weight: $fw--bold;
-    font-size: $fs__heading--top;
-}
-
-@mixin heading--bottom {
-    font-family: $ff--montserrat;
-    font-weight: $fw--bold;
-    font-size: $fs__heading--bottom;
+    text-transform: uppercase;
+    font-size: $fs;
+    color: $color;
     //add outline effect
+}
+
+// @mixin heading--bottom {
+//     font-family: $ff--montserrat;
+//     font-weight: $fw--bold;
+//     font-size: $fs__heading--bottom;
+// }
+
+@mixin bg-cover($position) {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+
+
+
+
+#es-RC-container {
+    font-family: $ff--montserrat;
+    .es-hero {
+        background-image: url('./img/bg-hero.png');
+        @include bg-cover (left bottom);
+        &__left {
+            &--new {
+                text-transform: uppercase;
+                background-color: $color--accent;
+                max-width: fit-content;
+                padding: 0.2rem;
+                color: white;
+                font-weight: $fw--bold;
+                transform: rotate(355deg) skew(-5deg, 0deg);
+            }
+            &--title {
+                //@include heading ($fs__heading--bottom, white);
+                text-shadow: $txt-shadow;
+            }
+            &--subtitle {
+                //@include heading ($fs__heading--bottom, white);
+                text-shadow: $txt-shadow;
+            }
+        }
+    }
 }

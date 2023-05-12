@@ -1,1 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+#es-RC-container {
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+}
+#es-RC-container .es-hero {
+  background-image: url("./img/bg-hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+#es-RC-container .es-hero__left--new {
+  text-transform: uppercase;
+  background-color: #0f6848;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0.2rem;
+  color: white;
+  font-weight: 700;
+  transform: rotate(355deg) skew(-5deg, 0deg);
+}
+#es-RC-container .es-hero__left--title {
+  text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+}
+#es-RC-container .es-hero__left--subtitle {
+  text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+}/*# sourceMappingURL=style.css.map */
