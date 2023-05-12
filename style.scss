@@ -1,0 +1,40 @@
+// import Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+// color variables
+$color--accent: #f08365;
+$color--shadow: #a66161;
+
+// font variables
+$ff--montserrat: 'Montserrat', 'DejaVu Sans', 'Verdana', sans-serif;
+$fw--regular: 400;
+$fw--bold: 700;
+$fs__heading--top: clamp(1.75rem, 1.4737rem + 1.2632vw, 2.5rem); //28px - 40px, test it
+$fs__heading--bottom: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem); //32px - 60 px
+$fs__body: clamp(1rem, 0.9539rem + 0.2105vw, 1.125rem); //16-18px
+
+// typography mixins
+@mixin body--regular {
+    font-family: $ff--montserrat;
+    font-weight: $fw--regular;
+    font-size: $fs__body;
+}
+
+@mixin body--bold {
+    font-family: $ff--montserrat;
+    font-weight: $fw--bold;
+    font-size: $fs__body;
+}
+
+@mixin heading--top {
+    font-family: $ff--montserrat;
+    font-weight: $fw--bold;
+    font-size: $fs__heading--top;
+}
+
+@mixin heading--bottom {
+    font-family: $ff--montserrat;
+    font-weight: $fw--bold;
+    font-size: $fs__heading--bottom;
+    //add outline effect
+}
