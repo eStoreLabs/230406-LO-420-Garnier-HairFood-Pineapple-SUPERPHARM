@@ -91,6 +91,51 @@
 #es-RC-container .es-hero__middle--packshot {
   max-width: 270px;
 }
+#es-RC-container .es-benefits {
+  padding: 3rem;
+  text-align: center;
+}
+#es-RC-container .es-benefits__header {
+  position: relative;
+}
+#es-RC-container .es-benefits__header--container {
+  border: 2px solid #f08365;
+  border-radius: 8px;
+  padding: 2rem;
+  padding-bottom: 6rem;
+}
+#es-RC-container .es-benefits__header--subtitle {
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 0.9539rem + 0.2105vw, 1.125rem);
+  color: #f08365;
+}
+#es-RC-container .es-benefits__header--subtitle--regular {
+  text-transform: unset;
+}
+#es-RC-container .es-benefits__main {
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+#es-RC-container .es-benefits__main--title {
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.75rem, 1.4737rem + 1.2632vw, 2.5rem);
+  color: #f08365;
+}
+#es-RC-container .es-benefits__main span {
+  display: block;
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem);
+  color: white;
+  text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
+}
 
 @media screen and (min-width: 601px) {
   #es-RC-container .es-hero {
@@ -114,5 +159,11 @@
   #es-RC-container .es-hero__middle {
     left: -130px;
     align-items: flex-end;
+  }
+  #es-RC-container .es-benefits__main {
+    transform: translate(-50%, -50%);
+  }
+  #es-RC-container .es-benefits__main--title {
+    width: 32ch;
   }
 }/*# sourceMappingURL=style.css.map */
