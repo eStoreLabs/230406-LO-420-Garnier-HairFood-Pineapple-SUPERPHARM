@@ -39,11 +39,6 @@ $padding--M: 1rem;
   color: $color;
 }
 
-// @mixin body--bold {
-//     font-family: $ff--montserrat;
-//     font-weight: $fw--bold;
-//     font-size: $fs__body;
-// }
 
 @mixin heading($fs, $color) {
   font-family: $ff--montserrat;
@@ -59,12 +54,6 @@ $padding--M: 1rem;
     flex-direction: $direction;
     justify-content: $justify;
 }
-
-// @mixin heading--bottom {
-//     font-family: $ff--montserrat;
-//     font-weight: $fw--bold;
-//     font-size: $fs__heading--bottom;
-// }
 
 @mixin bg-cover($position) {
   background-size: cover;
@@ -89,6 +78,8 @@ $padding--M: 1rem;
   }
   // reset end
   .es-hero {
+    min-height: 400px;
+    position: relative;
     &__left {
       background-image: url("#{$file-path}bg-hero-L#{$img-format}");
       @include bg-cover(left bottom);
@@ -108,22 +99,50 @@ $padding--M: 1rem;
         transform: rotate(355deg) skew(-5deg, 0deg);
       }
       &--title {
-        //@include heading ($fs__heading--bottom, white);
-        //font-size: clamp(2.25rem, 1.6053rem + 2.9474vw, 4rem);
-        font-size: clamp(2.5rem, 1.8553rem + 2.9474vw, 4.25rem);
+        font-size: clamp(2.5rem, 2.3618rem + 0.6316vw, 2.875rem);
         min-width: 10ch;
         text-shadow: $txt-shadow;
       }
       &--subtitle {
-        //@include heading ($fs__heading--bottom, white);
-        font-size: clamp(1.125rem, 0.9868rem + 0.6316vw, 1.5rem);
+        font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
         text-shadow: $txt-shadow;
         text-align: center;
       }
     }
-    &__middle {
+    
+    &__right {
       background-image: url("#{$file-path}bg-hero-R#{$img-format}");
       @include bg-cover(right bottom);
+      @include flex (column, flex-end);
+      position: relative;
+      min-height: 500px;
+      &--headline {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: clamp(1.5rem, 0.8553rem + 2.9474vw, 3.25rem);
+        text-shadow: $txt-shadow;
+        transform: rotate(355deg) skew(-5deg, 0deg);
+        max-width: 18ch;
+        position: absolute;
+        right: 0;
+        top: 1.5rem;
+      }
+    }
+    &__middle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: fit-content;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        &--badge {
+            max-width: 80px;
+        }
+        &--packshot {
+            max-width: 270px;
+        }
     }
   }
 }
@@ -134,10 +153,21 @@ $padding--M: 1rem;
         .es-hero {
         @include flex(row, flex-end);
         &__left {
-            flex-basis: 40%;
+            flex-basis: 35%;
+            &--subtitle {
+                padding-right: 7rem;
+            }
+        }
+        &__right {
+            flex-basis: 65%;
+            &--headline {
+                top: unset;
+                bottom: 3rem;
+            }
         }
         &__middle {
-            flex-basis: 60%;
+            left: -130px;
+            align-items: flex-end;
         }
         }
     }

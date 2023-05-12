@@ -14,6 +14,10 @@
   max-width: 100%;
   height: auto;
 }
+#es-RC-container .es-hero {
+  min-height: 400px;
+  position: relative;
+}
 #es-RC-container .es-hero__left {
   background-image: url("./img/bg-hero-L.png");
   background-size: cover;
@@ -39,20 +43,53 @@
   transform: rotate(355deg) skew(-5deg, 0deg);
 }
 #es-RC-container .es-hero__left--title {
-  font-size: clamp(2.5rem, 1.8553rem + 2.9474vw, 4.25rem);
+  font-size: clamp(2.5rem, 2.3618rem + 0.6316vw, 2.875rem);
   min-width: 10ch;
   text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 }
 #es-RC-container .es-hero__left--subtitle {
-  font-size: clamp(1.125rem, 0.9868rem + 0.6316vw, 1.5rem);
+  font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
   text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
   text-align: center;
 }
-#es-RC-container .es-hero__middle {
+#es-RC-container .es-hero__right {
   background-image: url("./img/bg-hero-R.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  min-height: 500px;
+}
+#es-RC-container .es-hero__right--headline {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 0.8553rem + 2.9474vw, 3.25rem);
+  text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+  transform: rotate(355deg) skew(-5deg, 0deg);
+  max-width: 18ch;
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+}
+#es-RC-container .es-hero__middle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#es-RC-container .es-hero__middle--badge {
+  max-width: 80px;
+}
+#es-RC-container .es-hero__middle--packshot {
+  max-width: 270px;
 }
 
 @media screen and (min-width: 601px) {
@@ -62,9 +99,20 @@
     justify-content: flex-end;
   }
   #es-RC-container .es-hero__left {
-    flex-basis: 40%;
+    flex-basis: 35%;
+  }
+  #es-RC-container .es-hero__left--subtitle {
+    padding-right: 7rem;
+  }
+  #es-RC-container .es-hero__right {
+    flex-basis: 65%;
+  }
+  #es-RC-container .es-hero__right--headline {
+    top: unset;
+    bottom: 3rem;
   }
   #es-RC-container .es-hero__middle {
-    flex-basis: 60%;
+    left: -130px;
+    align-items: flex-end;
   }
 }/*# sourceMappingURL=style.css.map */
