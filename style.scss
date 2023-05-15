@@ -201,6 +201,36 @@ $padding--XXL: 6rem;
         }
     }
   }
+  .es-how {
+    background-image: url("#{$file-path}bg-hair#{$img-format}");
+    @include bg-cover(center);
+    min-height: 400px;
+    position: relative;
+    &__wrapper {
+      position: absolute;
+      padding: $padding--L;
+      max-width: 34ch;
+      right: 2rem;
+      bottom: 2rem;
+      text-align: center;
+      &::before {
+        content: url("#{$file-path}arrow-left#{$img-format}");
+        position: absolute;
+        left: -80px;
+        top: 80px;
+      }
+    }
+    &__title {
+      @include heading($fs__heading--top, white);
+      & span {
+        @include heading($fs__heading--bottom, #f09884);
+        text-shadow: $txt-stroke--white;
+      }
+    }
+    &__descr {
+      @include body($fw--regular, unset, white);
+    }
+  }
 }
 ////////////////////////////////////////////////////////////////////////
 // tablet styles
