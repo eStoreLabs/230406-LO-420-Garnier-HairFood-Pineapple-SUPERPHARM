@@ -270,7 +270,45 @@ $padding--XXL: 6rem;
     @include heading($fw--bold, white);
     font-size: $fs__body;
     padding: $padding--L;
+    margin-block: $padding--XL;
     min-height: 300px;
+  }
+  .es-routine {
+    @include bg-cover(center);
+    background-image: url("#{$file-path}bg-routine#{$img-format}");
+    text-align: center;
+    padding: $padding--L;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    &__header {
+      @include heading($fs__heading--top, white);
+      & span {
+        display: block;
+        @include heading($fs__heading--bottom, #dc7669);
+        text-shadow: $txt-stroke--white;
+      }
+      &--S {
+        color: white;
+        text-transform: uppercase;
+        font-weight: $fw--bold;
+      }
+    }
+    &__single {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: $padding--M;
+      margin: $padding--L;
+      img {
+        max-width: 30%;
+      }
+      p {
+        text
+      }
+    }
+    
   }
 }
 ////////////////////////////////////////////////////////////////////////
@@ -331,4 +369,5 @@ $padding--XXL: 6rem;
       width: 33%;
     }
   }
+  
 }

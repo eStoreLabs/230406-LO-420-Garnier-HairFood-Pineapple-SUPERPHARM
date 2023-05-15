@@ -261,7 +261,51 @@
   color: white;
   font-size: clamp(1rem, 0.9539rem + 0.2105vw, 1.125rem);
   padding: 2rem;
+  margin-block: 3rem;
   min-height: 300px;
+}
+#es-RC-container .es-routine {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./img/bg-routine.png");
+  text-align: center;
+  padding: 2rem;
+}
+#es-RC-container .es-routine a {
+  text-decoration: none;
+  color: inherit;
+}
+#es-RC-container .es-routine__header {
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.75rem, 1.4737rem + 1.2632vw, 2.5rem);
+  color: white;
+}
+#es-RC-container .es-routine__header span {
+  display: block;
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem);
+  color: #dc7669;
+  text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+#es-RC-container .es-routine__header--S {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#es-RC-container .es-routine__single {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+#es-RC-container .es-routine__single img {
+  max-width: 30%;
 }
 
 @media screen and (min-width: 601px) {
