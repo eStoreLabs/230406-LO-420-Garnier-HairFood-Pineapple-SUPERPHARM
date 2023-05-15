@@ -318,7 +318,7 @@ $padding--XXL: 6rem;
     &__wrapper--border {
       margin-inline: $padding--XL;
       margin-top: -70px;
-      margin-bottom: 220px;
+      margin-bottom: 160px;
       @include border($color--accent-2);
       padding-bottom: unset;
       position: relative;
@@ -332,8 +332,6 @@ $padding--XXL: 6rem;
       top: 50%;
       width: 90%;
       padding-block: $padding--L;
-      //margin-top: 100px;
-      //margin-inline: auto;
       background-image: url("#{$file-path}recycle-symbol#{$img-format}");
       background-color: white;
       background-size: contain;
@@ -354,6 +352,42 @@ $padding--XXL: 6rem;
         text-shadow: $txt-stroke--accent;
         font-size: $fs__heading--bottom;
       }
+    }
+  }
+  .es-cross {
+    padding: $padding--XL;
+    text-align: center;
+    &__header {
+      @include heading($fs__heading--top, $color--main);
+      margin-bottom: $padding--L;
+      & span {
+        font-size: $fs__heading--bottom;
+        color: white;
+        text-shadow: $txt-stroke--main;
+      }
+    }
+    
+    &__figcaption--1 {
+      color: #f08365;
+    }
+    &__figcaption--2 {
+      color: #ff9231;
+    }
+    &__figcaption--3 {
+      color: #ffc317;
+    }
+    &__title {
+      font-size: $fs__heading--bottom;
+      text-transform: uppercase;
+      margin-top: $padding--S;
+    }
+    &__subtitle {
+      @include body($fw--bold, uppercase, inherit);
+      margin-bottom: $padding--M;
+    }
+    &__descr {
+      color: black;
+      margin-bottom: $padding--L;
     }
   }
 }
@@ -442,6 +476,22 @@ $padding--XXL: 6rem;
         top: 100px;
         right: 0;
       }
+    }
+  }
+  .es-cross {
+    &__wrapper--flex {
+      @include flex(row, center);
+      outline: 1px solid blue;
+    }
+    &__single {
+      width: 30%;
+      outline: 1px solid red;
+      img {
+        width: 100%;
+      }
+    }
+    &__subtitle {
+      height: 3rem;
     }
   }
 }
