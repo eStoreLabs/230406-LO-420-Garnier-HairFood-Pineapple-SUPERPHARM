@@ -165,10 +165,6 @@ $padding--XXL: 6rem;
       position: relative;
       margin-bottom: $padding--XXL;
       &--container {
-        // border: 2px solid $color--main;
-        // border-radius: 8px;
-        // padding: $padding--L;
-        // padding-bottom: $padding--XXL;
         @include border;
       }
       &--subtitle {
@@ -182,7 +178,7 @@ $padding--XXL: 6rem;
       background-color: white;
       position: absolute;
       left: 50%;
-    transform: translate(-50%, -30%);
+      transform: translate(-50%, -30%);
     
       &--title {
         @include heading($fs__heading--top, $color--main);
@@ -234,9 +230,10 @@ $padding--XXL: 6rem;
   }
   .es-use {
     padding: $padding--XXL $padding--XL;
+    text-align: center;
     &__container {
       @include border;
-      text-align: center;
+      position: relative;
     }
     &__title {
       @include heading($fs__heading--top, $color--main);
@@ -250,16 +247,20 @@ $padding--XXL: 6rem;
         text-shadow: $txt-stroke--main;
       }
     }
-    // &__video--wrapper {
-    //   width: max-content;
-    //   height: max-content;
-     
+    &__wrapper {
+      margin-top: -60px;
+      backdrop-filter: opacity(100%);
+    }
+    &__single {
+      padding: $padding--M;
+      &--img {
+        margin-bottom:  $padding--S;
+      }
+      &--step {
+        @include body($fw--bold, uppercase, $color--main);
+      }
+    }
 
-    // }
-    // #es-use__video--player {
-    //   width: 500px;
-    // }
-    
   }
 }
 ////////////////////////////////////////////////////////////////////////
@@ -310,6 +311,11 @@ $padding--XXL: 6rem;
         left: -80px;
         top: 80px;
       }
+    }
+  }
+  .es-use {
+    &__wrapper {
+      @include flex(row, center);
     }
   }
 }
