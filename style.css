@@ -314,6 +314,54 @@
 #es-RC-container .es-routine__arrow {
   visibility: hidden;
 }
+#es-RC-container .es-routine__wrapper--border {
+  margin-inline: 3rem;
+  margin-top: -70px;
+  margin-bottom: 220px;
+  border: 2px solid #006b2d;
+  border-radius: 8px;
+  padding: 2rem;
+  padding-bottom: 6rem;
+  padding-bottom: unset;
+  position: relative;
+  z-index: -1;
+  height: 200px;
+}
+#es-RC-container .es-routine__wrapper--content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  width: 90%;
+  padding-block: 2rem;
+  background-image: url("./img/recycle-symbol.png");
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#es-RC-container .es-routine__descr--wrapper {
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 0.9539rem + 0.2105vw, 1.125rem);
+  text-transform: uppercase;
+  color: #006b2d;
+  font-size: smaller;
+  margin-block: 1rem;
+}
+#es-RC-container .es-routine__header--wrapper {
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.75rem, 1.4737rem + 1.2632vw, 2.5rem);
+  color: #006b2d;
+}
+#es-RC-container .es-routine__header--wrapper span {
+  display: block;
+  color: white;
+  text-shadow: -1px 1px 0 #006b2d, 1px 1px 0 #006b2d, 1px -1px 0 #006b2d, -1px -1px 0 #006b2d;
+  font-size: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem);
+}
 
 @media screen and (min-width: 601px) {
   #es-RC-container .es-hero {

@@ -5,7 +5,8 @@
 $color--main: #f08365;
 $color--shadow: #a66161;
 $color--accent-1: #0f6848;
-$color--accent-2: #267b32;
+$color--accent-2: #006b2d;
+$color--accent-3: #267b32;
 
 // font variables
 $ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
@@ -24,7 +25,8 @@ $txt-stroke--white: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
   -1px -1px 0 #fff;
 $txt-stroke--main: -1px 1px 0 $color--main, 1px 1px 0 $color--main,
   1px -1px 0 $color--main, -1px -1px 0 $color--main;
-
+  $txt-stroke--accent: -1px 1px 0 $color--accent-2, 1px 1px 0 $color--accent-2,
+  1px -1px 0 $color--accent-2, -1px -1px 0 $color--accent-2;
 // utility variables
 // images
 $file-path: "./img/";
@@ -67,8 +69,8 @@ $padding--XXL: 6rem;
   background-position: $position;
 }
 
-@mixin border {
-  border: 2px solid $color--main;
+@mixin border ($color) {
+  border: 2px solid $color;
   border-radius: 8px;
   padding: $padding--L;
   padding-bottom: $padding--XXL;
@@ -166,7 +168,7 @@ $padding--XXL: 6rem;
       position: relative;
       margin-bottom: $padding--XXL;
       &--container {
-        @include border;
+        @include border($color--main);
       }
       &--subtitle {
         @include heading($fs__body, $color--main);
@@ -232,7 +234,7 @@ $padding--XXL: 6rem;
     padding: $padding--XXL $padding--XL;
     text-align: center;
     &__container {
-      @include border;
+      @include border($color--main);
       position: relative;
     }
     &__title {
@@ -273,6 +275,7 @@ $padding--XXL: 6rem;
   }
   .es-routine {
     text-align: center;
+    
     &__bg {
       background-image: url("#{$file-path}bg-routine#{$img-format}");
       background-size: contain;
@@ -306,13 +309,51 @@ $padding--XXL: 6rem;
       margin-top: $padding--L;
       position: relative;
     }
-    
-
     &__descr {
       max-width: 30ch;
     }
     &__arrow {
       visibility: hidden;
+    }
+    &__wrapper--border {
+      margin-inline: $padding--XL;
+      margin-top: -70px;
+      margin-bottom: 220px;
+      @include border($color--accent-2);
+      padding-bottom: unset;
+      position: relative;
+      z-index: -1;
+      height: 200px;
+    }
+    &__wrapper--content {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 50%;
+      width: 90%;
+      padding-block: $padding--L;
+      //margin-top: 100px;
+      //margin-inline: auto;
+      background-image: url("#{$file-path}recycle-symbol#{$img-format}");
+      background-color: white;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__descr--wrapper {
+      @include body($fw--bold, uppercase, $color--accent-2);
+      font-size: smaller;
+      margin-block: $padding--M;
+    }
+    &__header--wrapper {
+      @include heading($fs__heading--top, $color--accent-2);
+      
+      & span {
+        display: block;
+        color: white;
+        text-shadow: $txt-stroke--accent;
+        font-size: $fs__heading--bottom;
+      }
     }
   }
 }
