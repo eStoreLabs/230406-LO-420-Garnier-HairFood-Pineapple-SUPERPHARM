@@ -196,6 +196,38 @@
   text-transform: unset;
   color: white;
 }
+#es-RC-container .es-use {
+  padding: 6rem 3rem;
+}
+#es-RC-container .es-use__container {
+  border: 2px solid #f08365;
+  border-radius: 8px;
+  padding: 2rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+#es-RC-container .es-use__title {
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(1.75rem, 1.4737rem + 1.2632vw, 2.5rem);
+  color: #f08365;
+  margin-top: -2em;
+  margin-inline: auto;
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#es-RC-container .es-use__title span {
+  display: block;
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem);
+  color: white;
+  text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
+}
+
 @media screen and (min-width: 601px) {
   #es-RC-container .es-hero {
     display: flex;

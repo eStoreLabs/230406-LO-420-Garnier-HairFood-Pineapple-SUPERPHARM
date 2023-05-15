@@ -66,6 +66,12 @@ $padding--XXL: 6rem;
   background-position: $position;
 }
 
+@mixin border {
+  border: 2px solid $color--main;
+        border-radius: 8px;
+        padding: $padding--L;
+        padding-bottom: $padding--XXL;
+}
 /////////////////////////////////////////////////////////////
 // main styles
 
@@ -159,11 +165,11 @@ $padding--XXL: 6rem;
       position: relative;
       margin-bottom: $padding--XXL;
       &--container {
-        border: 2px solid $color--main;
-        border-radius: 8px;
-        padding: $padding--L;
-        padding-bottom: $padding--XXL;
-        
+        // border: 2px solid $color--main;
+        // border-radius: 8px;
+        // padding: $padding--L;
+        // padding-bottom: $padding--XXL;
+        @include border;
       }
       &--subtitle {
         @include heading($fs__body, $color--main);
@@ -227,6 +233,23 @@ $padding--XXL: 6rem;
     }
   }
   .es-use {
+    padding: $padding--XXL $padding--XL;
+    &__container {
+      @include border;
+      text-align: center;
+    }
+    &__title {
+      @include heading($fs__heading--top, $color--main);
+      margin-top: -2em;
+      margin-inline: auto;
+      background-color: white;
+      width: fit-content;
+      & span {
+        display: block;
+        @include heading($fs__heading--bottom, white);
+        text-shadow: $txt-stroke--main;
+      }
+    }
     // &__video--wrapper {
     //   width: max-content;
     //   height: max-content;
