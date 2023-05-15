@@ -405,6 +405,17 @@
   color: black;
   margin-bottom: 2rem;
 }
+#es-RC-container .es-disclaimer {
+  text-align: center;
+  font-size: x-small;
+  padding-inline: 2rem;
+  margin-bottom: 1rem;
+}
+#es-RC-container .es-footer {
+  background-color: #267b32;
+  text-align: center;
+  padding: 0.5rem;
+}
 
 @media screen and (min-width: 601px) {
   #es-RC-container .es-hero {
@@ -503,5 +514,8 @@
   #es-RC-container .es-cross__subtitle {
     height: 3rem;
     font-size: small;
+  }
+  #es-RC-container .es-footer img {
+    max-width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */

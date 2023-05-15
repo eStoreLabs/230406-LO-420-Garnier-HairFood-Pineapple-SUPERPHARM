@@ -390,6 +390,17 @@ $padding--XXL: 6rem;
       margin-bottom: $padding--L;
     }
   }
+  .es-disclaimer {
+  text-align: center;
+  font-size: x-small;
+  padding-inline: $padding--L;
+  margin-bottom: $padding--M;
+  }
+  .es-footer {
+    background-color: $color--accent-3;
+    text-align: center;
+    padding: $padding--S;
+  }
 }
 ////////////////////////////////////////////////////////////////////////
 // tablet styles
@@ -494,6 +505,11 @@ $padding--XXL: 6rem;
     &__subtitle {
       height: 3rem;
       font-size: small;
+    }
+  }
+  .es-footer {
+    img {
+      max-width: 50%;
     }
   }
 }
