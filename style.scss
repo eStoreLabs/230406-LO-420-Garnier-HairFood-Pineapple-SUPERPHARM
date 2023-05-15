@@ -13,13 +13,9 @@ $ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
 $fw--regular: 400;
 $fw--bold: 700;
 $ft--italic: italic;
-$fs__heading--top: clamp(
-  1.75rem,
-  1.4737rem + 1.2632vw,
-  2.5rem
-); //28px - 40px, test it
-$fs__heading--bottom: clamp(2rem, 1.3553rem + 2.9474vw, 3.75rem); //32px - 60 px
-$fs__body: clamp(1rem, 0.9539rem + 0.2105vw, 1.125rem); //16-18px
+$fs__heading--top: clamp(1.625rem, 1.4rem + 1.2vw, 2rem); // 300px-800px, 26-32px
+$fs__heading--bottom: clamp(1.75rem, 1.45rem + 1.6vw, 2.25rem); // 300px-800px, 28-36px
+$fs-body: clamp(0.875rem, 0.8rem + 0.4vw, 1rem); //14-16px
 $txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 $txt-stroke--white: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
   -1px -1px 0 #fff;
@@ -27,6 +23,7 @@ $txt-stroke--main: -1px 1px 0 $color--main, 1px 1px 0 $color--main,
   1px -1px 0 $color--main, -1px -1px 0 $color--main;
 $txt-stroke--accent: -1px 1px 0 $color--accent-2, 1px 1px 0 $color--accent-2,
   1px -1px 0 $color--accent-2, -1px -1px 0 $color--accent-2;
+
 // utility variables
 // images
 $file-path: "./img/";
