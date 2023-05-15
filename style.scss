@@ -481,17 +481,19 @@ $padding--XXL: 6rem;
   .es-cross {
     &__wrapper--flex {
       @include flex(row, center);
-      outline: 1px solid blue;
     }
     &__single {
       width: 30%;
-      outline: 1px solid red;
       img {
         width: 100%;
       }
     }
+    &__title {
+      font-size: x-large;
+    }
     &__subtitle {
       height: 3rem;
+      font-size: small;
     }
   }
 }
