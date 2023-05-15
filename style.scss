@@ -4,7 +4,8 @@
 // color variables
 $color--main: #f08365;
 $color--shadow: #a66161;
-$color--accent: #0f6848;
+$color--accent-1: #0f6848;
+$color--accent-2: #267b32;
 
 // font variables
 $ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
@@ -107,7 +108,7 @@ $padding--XXL: 6rem;
         margin-inline: auto;
       }
       &--new {
-        background-color: $color--accent;
+        background-color: $color--accent-1;
         max-width: fit-content;
         padding: 0.2rem;
         transform: rotate(355deg) skew(-5deg, 0deg);
