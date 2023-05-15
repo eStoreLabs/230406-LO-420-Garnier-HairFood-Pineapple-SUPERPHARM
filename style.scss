@@ -226,6 +226,18 @@ $padding--XXL: 6rem;
       @include body($fw--regular, unset, white);
     }
   }
+  .es-use {
+    // &__video--wrapper {
+    //   width: max-content;
+    //   height: max-content;
+     
+
+    // }
+    // #es-use__video--player {
+    //   width: 500px;
+    // }
+    
+  }
 }
 ////////////////////////////////////////////////////////////////////////
 // tablet styles
