@@ -317,5 +317,8 @@ $padding--XXL: 6rem;
     &__wrapper {
       @include flex(row, center);
     }
+    &__single {
+      width: 33%;
+    }
   }
 }

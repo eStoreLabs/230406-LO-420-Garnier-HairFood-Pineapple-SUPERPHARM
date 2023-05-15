@@ -296,4 +296,7 @@
     flex-direction: row;
     justify-content: center;
   }
+  .es-use__single {
+    width: 33%;
+  }
 }/*# sourceMappingURL=style.css.map */
