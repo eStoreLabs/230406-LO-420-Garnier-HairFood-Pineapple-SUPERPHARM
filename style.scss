@@ -69,9 +69,9 @@ $padding--XXL: 6rem;
 
 @mixin border {
   border: 2px solid $color--main;
-        border-radius: 8px;
-        padding: $padding--L;
-        padding-bottom: $padding--XXL;
+  border-radius: 8px;
+  padding: $padding--L;
+  padding-bottom: $padding--XXL;
 }
 /////////////////////////////////////////////////////////////
 // main styles
@@ -180,7 +180,7 @@ $padding--XXL: 6rem;
       position: absolute;
       left: 50%;
       transform: translate(-50%, -30%);
-    
+
       &--title {
         @include heading($fs__heading--top, $color--main);
       }
@@ -191,17 +191,17 @@ $padding--XXL: 6rem;
       }
     }
     &__icon-wrapper {
-        padding-block: $padding--XXL;
+      padding-block: $padding--XXL;
     }
     &__icon-single {
-        padding: $padding--M;        
-        &--title {
-            @include body($fw--bold, uppercase, $color--main);
-            margin-top: $padding--L;
-        }
-        &--descr {
-            @include body($fw--regular, unset, black);
-        }
+      padding: $padding--M;
+      &--title {
+        @include body($fw--bold, uppercase, $color--main);
+        margin-top: $padding--L;
+      }
+      &--descr {
+        @include body($fw--regular, unset, black);
+      }
     }
   }
   .es-how {
@@ -216,7 +216,6 @@ $padding--XXL: 6rem;
       right: 2rem;
       bottom: 2rem;
       text-align: center;
-      
     }
     &__title {
       @include heading($fs__heading--top, white);
@@ -255,18 +254,17 @@ $padding--XXL: 6rem;
     &__single {
       padding: $padding--M;
       &--img {
-        margin-bottom:  $padding--S;
+        margin-bottom: $padding--S;
       }
       &--step {
         @include body($fw--bold, uppercase, $color--main);
       }
     }
-
   }
   .es-before-after {
     background-image: url("#{$file-path}bg-before-after#{$img-format}");
     @include bg-cover(center);
-    @include flex (row, space-between);
+    @include flex(row, space-between);
     @include heading($fw--bold, white);
     font-size: $fs__body;
     padding: $padding--L;
@@ -274,23 +272,27 @@ $padding--XXL: 6rem;
     min-height: 300px;
   }
   .es-routine {
-    @include bg-cover(center);
-    background-image: url("#{$file-path}bg-routine#{$img-format}");
     text-align: center;
-    padding: $padding--L;
+    &__bg {
+      background-image: url("#{$file-path}bg-routine#{$img-format}");
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding-top: $padding--L;
+    }
     a {
       text-decoration: none;
       color: inherit;
     }
     &__header {
       @include heading($fs__heading--top, white);
+      padding: $padding--M;
       & span {
         display: block;
         @include heading($fs__heading--bottom, #dc7669);
         text-shadow: $txt-stroke--white;
       }
       &--S {
-        color: white;
+        color: $color--main;
         text-transform: uppercase;
         font-weight: $fw--bold;
       }
@@ -299,16 +301,19 @@ $padding--XXL: 6rem;
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
+      justify-content: space-between;
       gap: $padding--M;
-      margin: $padding--L;
-      img {
-        max-width: 30%;
-      }
-      p {
-        text
-      }
+      margin-top: $padding--L;
+      position: relative;
     }
     
+
+    &__descr {
+      max-width: 30ch;
+    }
+    &__arrow {
+      visibility: hidden;
+    }
   }
 }
 ////////////////////////////////////////////////////////////////////////
@@ -336,21 +341,21 @@ $padding--XXL: 6rem;
       }
     }
     .es-benefits {
-        &__main {
-            transform: translate(-50%, -50%);
-            &--title {
-            width: 32ch;
-        } 
+      &__main {
+        transform: translate(-50%, -50%);
+        &--title {
+          width: 32ch;
         }
-        &__icon-wrapper {
-            @include flex(row, center);
-            padding: unset;
-        }
-        &__icon-single--title {
-            height: 3.5rem;
-        }
+      }
+      &__icon-wrapper {
+        @include flex(row, center);
+        padding: unset;
+      }
+      &__icon-single--title {
+        height: 3.5rem;
+      }
     }
-  }
+  
   .es-how {
     &__wrapper {
       &::before {
@@ -369,5 +374,30 @@ $padding--XXL: 6rem;
       width: 33%;
     }
   }
-  
+  .es-routine {
+    &__wrapper--flex {
+      @include flex(row, center);
+    }
+    &__header--S {
+      color: white;
+    }
+    
+    &__arrow {
+      visibility: visible;
+      max-width: 30%;
+      transform: rotate(90deg) scaleX(-1);
+      &--1 {
+        position: absolute;
+        top: 100px;
+        left: 0;
+      }
+      &--3 {
+        transform: rotate(270deg);
+        position: absolute;
+        top: 100px;
+        right: 0;
+      }
+    }
+  }
+}
 }
