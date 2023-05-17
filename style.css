@@ -448,6 +448,18 @@
   color: white;
   text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
 }
+#es-RC-container .es-cross__img-container {
+  overflow: hidden;
+  max-width: 300px;
+  margin: auto;
+}
+#es-RC-container .es-cross__img-container img {
+  scale: 1;
+  transition: all 200ms ease-in;
+}
+#es-RC-container .es-cross__img-container img:hover {
+  scale: 1.05;
+}
 #es-RC-container .es-cross__figcaption--1 {
   color: #f08365;
 }

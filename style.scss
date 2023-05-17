@@ -468,6 +468,19 @@ $padding--XXL: 6rem;
         text-shadow: $txt-stroke--main;
       }
     }
+    &__img-container {
+      overflow: hidden;
+      max-width: 300px;
+      margin: auto;
+      img {
+        scale: 1.0;
+        transition: all 200ms ease-in;
+        &:hover {
+          scale: 1.05;
+        }
+      }
+    }
+    
 
     &__figcaption--1 {
       color: #f08365;
