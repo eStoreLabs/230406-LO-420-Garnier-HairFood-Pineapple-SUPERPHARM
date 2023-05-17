@@ -346,12 +346,17 @@ $padding--XXL: 6rem;
     }
    
   }
-  .es-use {
+  .es-ingredients {
     padding: $padding--XXL $padding--XL;
     text-align: center;
     &__container {
       @include border($color--main);
       position: relative;
+      padding-bottom: 0;
+      &--inner {
+        @include flex(column-reverse, center);
+        
+      }
     }
     &__title {
       @include heading($fs__heading--top, $color--main);
@@ -365,27 +370,33 @@ $padding--XXL: 6rem;
         text-shadow: $txt-stroke--main;
       }
     }
+    &__single {
+      outline: 1px solid red;
+      &--title {
+        @include body($fw--bold, uppercase, $color--main);
+      }
+    }
     &__wrapper {
       margin-top: -60px;
       backdrop-filter: opacity(100%);
     }
-    &__single {
-      padding: $padding--M;
-      width: 28ch;
-      margin-inline: auto;
-      &--img {
-        margin-bottom: $padding--S;
+    // &__single {
+    //   padding: $padding--M;
+    //   width: 28ch;
+    //   margin-inline: auto;
+    //   &--img {
+    //     margin-bottom: $padding--S;
 
-        scale: 1;
-        transition: all 200ms ease-in-out;
-        &:hover {
-          scale: 1.05;
-        }
-      }
-      &--step {
-        @include body($fw--bold, uppercase, $color--main);
-      }
-    }
+    //     scale: 1;
+    //     transition: all 200ms ease-in-out;
+    //     &:hover {
+    //       scale: 1.05;
+    //     }
+    //   }
+    //   &--step {
+    //     @include body($fw--bold, uppercase, $color--main);
+    //   }
+    // }
   }
   .es-video {
     max-width: 960px;
@@ -637,14 +648,14 @@ $padding--XXL: 6rem;
     }
 
     
-    .es-use {
+    .es-ingredients {
       &__wrapper {
         @include flex(row, center);
       }
-      &__single {
-        width: 33%;
-        padding: unset;
-      }
+      // &__single {
+      //   width: 33%;
+      //   padding: unset;
+      // }
     }
     .es-routine {
       &__bg {

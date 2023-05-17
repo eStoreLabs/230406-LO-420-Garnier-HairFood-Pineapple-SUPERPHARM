@@ -236,18 +236,24 @@
   text-transform: unset;
   color: black;
 }
-#es-RC-container .es-use {
+#es-RC-container .es-ingredients {
   padding: 6rem 3rem;
   text-align: center;
 }
-#es-RC-container .es-use__container {
+#es-RC-container .es-ingredients__container {
   border: 2px solid #f08365;
   border-radius: 8px;
   padding: 2rem;
   padding-bottom: 6rem;
   position: relative;
+  padding-bottom: 0;
 }
-#es-RC-container .es-use__title {
+#es-RC-container .es-ingredients__container--inner {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+#es-RC-container .es-ingredients__title {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -259,7 +265,7 @@
   width: -moz-fit-content;
   width: fit-content;
 }
-#es-RC-container .es-use__title span {
+#es-RC-container .es-ingredients__title span {
   display: block;
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
   font-weight: 700;
@@ -268,30 +274,20 @@
   color: white;
   text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
 }
-#es-RC-container .es-use__wrapper {
-  margin-top: -60px;
-  -webkit-backdrop-filter: opacity(100%);
-          backdrop-filter: opacity(100%);
+#es-RC-container .es-ingredients__single {
+  outline: 1px solid red;
 }
-#es-RC-container .es-use__single {
-  padding: 1rem;
-  width: 28ch;
-  margin-inline: auto;
-}
-#es-RC-container .es-use__single--img {
-  margin-bottom: 0.5rem;
-  scale: 1;
-  transition: all 200ms ease-in-out;
-}
-#es-RC-container .es-use__single--img:hover {
-  scale: 1.05;
-}
-#es-RC-container .es-use__single--step {
+#es-RC-container .es-ingredients__single--title {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
   font-weight: 700;
   font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
   text-transform: uppercase;
   color: #f08365;
+}
+#es-RC-container .es-ingredients__wrapper {
+  margin-top: -60px;
+  -webkit-backdrop-filter: opacity(100%);
+          backdrop-filter: opacity(100%);
 }
 #es-RC-container .es-video {
   max-width: 960px;
@@ -623,14 +619,10 @@
   #es-RC-container .es-benefits__icon-single--descr {
     font-size: 12px;
   }
-  #es-RC-container .es-use__wrapper {
+  #es-RC-container .es-ingredients__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
-  #es-RC-container .es-use__single {
-    width: 33%;
-    padding: unset;
   }
   #es-RC-container .es-routine__bg {
     background-image: url("./img/bg-routine.png");
