@@ -132,6 +132,9 @@
   text-transform: uppercase;
   font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
   color: #f08365;
+  max-width: 21ch;
+  margin: auto;
+  margin-bottom: 0.2rem;
 }
 #es-RC-container .es-benefits__header--subtitle--regular {
   text-transform: unset;
@@ -593,14 +596,25 @@
   #es-RC-container .es-benefits__main--title {
     width: 32ch;
   }
+  #es-RC-container .es-benefits__header--subtitle {
+    max-width: unset;
+  }
   #es-RC-container .es-benefits__icon-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     padding: unset;
   }
+  #es-RC-container .es-benefits__icon-single {
+    flex-basis: 25%;
+    padding: unset;
+  }
   #es-RC-container .es-benefits__icon-single--title {
-    height: 3.5rem;
+    height: 4rem;
+    font-size: 14px;
+  }
+  #es-RC-container .es-benefits__icon-single--descr {
+    font-size: 12px;
   }
   #es-RC-container .es-how__wrapper::before {
     content: url("./img/arrow-left.png");

@@ -270,6 +270,9 @@ $padding--XXL: 6rem;
       }
       &--subtitle {
         @include heading($fs__body, $color--main);
+        max-width: 21ch;
+        margin: auto;
+        margin-bottom: $padding--XS;
         &--regular {
           text-transform: unset;
         }
@@ -607,12 +610,23 @@ $padding--XXL: 6rem;
           width: 32ch;
         }
       }
+      &__header--subtitle {
+        max-width: unset;
+      }
       &__icon-wrapper {
         @include flex(row, center);
         padding: unset;
       }
+      &__icon-single {
+        flex-basis: 25%;
+        padding: unset;
+      }
       &__icon-single--title {
-        height: 3.5rem;
+        height: 4rem;
+        font-size: 14px;
+      }
+      &__icon-single--descr {
+        font-size: 12px;
       }
     }
 
