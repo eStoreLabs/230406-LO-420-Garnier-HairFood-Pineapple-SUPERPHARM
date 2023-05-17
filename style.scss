@@ -105,12 +105,13 @@ $padding--XXL: 6rem;
 }
 
 @mixin btn--secondary($color) {
-  background-color: white;
   border-radius: 10px;
   outline: 2px solid $color;
-  padding: $padding--M $padding--XL;
+  padding: $padding--M;
   text-decoration: none;
   color: $color;
+  width: 300px;
+  text-align: center;
   @include body($fw--bold, uppercase, $color);
   transition: .4s ease-in-out;
 }
@@ -663,6 +664,7 @@ $padding--XXL: 6rem;
       }
       &__single {
         width: 30%;
+        
         img {
           width: 100%;
         }
@@ -673,6 +675,9 @@ $padding--XXL: 6rem;
       &__subtitle {
         height: 3rem;
         font-size: small;
+      }
+      &__descr {
+        height: 2rem;
       }
     }
     .es-footer {
