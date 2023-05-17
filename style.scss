@@ -298,6 +298,8 @@ $padding--XXL: 6rem;
     }
     &__single {
       padding: $padding--M;
+      width: 28ch;
+      margin-inline: auto;
       &--img {
         margin-bottom: $padding--S;
       }
@@ -504,6 +506,7 @@ $padding--XXL: 6rem;
       }
       &__single {
         width: 33%;
+        padding: unset;
       }
     }
     .es-routine {

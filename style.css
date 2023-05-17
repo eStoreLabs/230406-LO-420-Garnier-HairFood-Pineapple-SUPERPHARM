@@ -263,6 +263,8 @@
 }
 #es-RC-container .es-use__single {
   padding: 1rem;
+  width: 28ch;
+  margin-inline: auto;
 }
 #es-RC-container .es-use__single--img {
   margin-bottom: 0.5rem;
@@ -499,6 +501,7 @@
   }
   #es-RC-container .es-use__single {
     width: 33%;
+    padding: unset;
   }
   #es-RC-container .es-routine__wrapper--flex {
     display: flex;
