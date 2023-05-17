@@ -322,7 +322,7 @@ $padding--XXL: 6rem;
     }
   }
   .es-use {
-    padding-top: $padding--XXL;
+    padding: $padding--XXL $padding--XL;
     text-align: center;
     &__container {
       @include border($color--main);
