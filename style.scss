@@ -255,15 +255,17 @@ $padding--XXL: 6rem;
     &__wrapper {
       position: absolute;
       padding: $padding--L;
-      max-width: 34ch;
+      max-width: 32ch;
       right: 2rem;
       bottom: 2rem;
       text-align: center;
     }
     &__title {
       @include heading($fs__heading--top, white);
+      margin-bottom: $padding--M;
       & span {
         @include heading($fs__heading--bottom, #f09884);
+        display: block;
         text-shadow: $txt-stroke--white;
       }
     }
@@ -492,7 +494,7 @@ $padding--XXL: 6rem;
           content: url("#{$file-path}arrow-left#{$img-format}");
           position: absolute;
           left: -125px;
-          top: 45px;
+          top: 93px;
         }
       }
     }
