@@ -85,6 +85,7 @@ $padding--XXL: 6rem;
   padding-bottom: $padding--XXL;
 }
 
+// button mixins
 @mixin btn--primary {
   background-color: $color--main;
   border-radius: 10px;
@@ -101,6 +102,22 @@ $padding--XXL: 6rem;
   outline: 2px solid $color--main;
   background-color: white;
   color: $color--main;
+}
+
+@mixin btn--secondary($color) {
+  background-color: white;
+  border-radius: 10px;
+  outline: 2px solid $color;
+  padding: $padding--M $padding--XL;
+  text-decoration: none;
+  color: $color;
+  @include body($fw--bold, uppercase, $color);
+  transition: .4s ease-in-out;
+}
+
+@mixin btn--secondary--hover($color) {
+  background-color: $color;
+  color: white;
 }
 
 // animations
@@ -468,6 +485,9 @@ $padding--XXL: 6rem;
         text-shadow: $txt-stroke--main;
       }
     }
+    &__single {
+      margin-bottom: $padding--XL;
+    }
     &__img-container {
       overflow: hidden;
       max-width: 300px;
@@ -484,13 +504,32 @@ $padding--XXL: 6rem;
 
     &__figcaption--1 {
       color: #f08365;
+      & a {
+        @include btn--secondary(#f08365);
+        &:hover {
+          @include btn--secondary--hover (#f08365);
+        }
+      }
     }
     &__figcaption--2 {
       color: #ff9231;
+      & a {
+        @include btn--secondary(#ff9231);
+        &:hover {
+          @include btn--secondary--hover (#ff9231);
+        }
+      }
     }
     &__figcaption--3 {
       color: #ffc317;
+      & a {
+        @include btn--secondary(#ffc317);
+        &:hover {
+          @include btn--secondary--hover (#ffc317);
+        }
+      }
     }
+
     &__title {
       font-size: $fs__heading--bottom;
       text-transform: uppercase;
