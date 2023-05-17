@@ -294,7 +294,7 @@ $padding--XXL: 6rem;
       }
     }
     &__icon-wrapper {
-      padding-block: $padding--XXL;
+      padding-top: $padding--XXL;
     }
     &__icon-single {
       padding: $padding--M $padding--XS;
@@ -315,30 +315,36 @@ $padding--XXL: 6rem;
     }
   }
   .es-how {
-    background-image: url("#{$file-path}bg-hair#{$img-format}");
-    @include bg-cover(center);
-    min-height: 400px;
+    text-align: center;
     position: relative;
-    &__wrapper {
-      position: absolute;
-      padding: $padding--L;
-      max-width: 32ch;
-      right: 2rem;
-      bottom: 2rem;
-      text-align: center;
-    }
+    
     &__title {
+      background-image: url("#{$file-path}bg-hair-mask#{$img-format}");
       @include heading($fs__heading--top, white);
-      margin-bottom: $padding--M;
+      padding: $padding--L;
+      
       & span {
-        @include heading($fs__heading--bottom, #f09884);
+        @include heading($fs__heading--bottom, #c298b6);
         display: block;
         text-shadow: $txt-stroke--white;
       }
     }
-    &__descr {
-      @include body($fw--regular, unset, white);
+    &__wrapper {
+      @include flex(column, center);
+      align-items: center;
+      margin-top: $padding--M;
+      gap: $padding--M;
     }
+    &__item {
+      max-width: 24ch;
+      &--heading {
+        @include body($fw--bold, uppercase, $color--main);
+      }
+      &--descr {
+        @include body($fw--regular, unset, black)
+      }
+    }
+   
   }
   .es-use {
     padding: $padding--XXL $padding--XL;
@@ -630,16 +636,7 @@ $padding--XXL: 6rem;
       }
     }
 
-    .es-how {
-      &__wrapper {
-        &::before {
-          content: url("#{$file-path}arrow-left#{$img-format}");
-          position: absolute;
-          left: -125px;
-          top: 93px;
-        }
-      }
-    }
+    
     .es-use {
       &__wrapper {
         @include flex(row, center);
@@ -713,6 +710,70 @@ $padding--XXL: 6rem;
     .es-footer {
       img {
         max-width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 730px) {
+  #es-RC-container {
+    .es-how {
+      background-image: url("#{$file-path}bg-hair-mask#{$img-format}");
+      @include bg-cover(center);
+      position: relative;
+      min-height: 400px;
+      max-height: 500px;
+      &__title {
+        background-image: none;
+        position: absolute;
+      }
+      
+      &__item {
+        position: absolute;
+        &--1 {
+          top: 50%;
+          left: 3%;
+          &:after {
+            content: url("#{$file-path}arrow-white#{$img-format}");
+            display: block;
+            scale: 0.7;
+            rotate: 184deg;
+            position: absolute;
+            right: -5%;
+            bottom: -65%;
+          }
+        }
+        &--2 {
+          top: 15%;
+          right: 3%;
+          &:before {
+            content: url("#{$file-path}arrow-white#{$img-format}");
+            display: block;
+            scale: 0.8;
+            rotate: -15deg;
+            position: absolute;
+            left: -30%;
+            top: -30%;
+          }
+        }
+
+        &--3 {
+          bottom: 15%;
+          right: 3%;
+          &:before {
+            content: url("#{$file-path}arrow-white#{$img-format}");
+            display: block;
+            scale: 0.6;
+            rotate: 177deg;
+            transform: scaleX(-1);
+            position: absolute;
+            left: -30%;
+            top: 5%;
+          }
+        }
+        &--heading {
+          color: white;
+        }
       }
     }
   }
