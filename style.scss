@@ -1,6 +1,6 @@
 // import Montserrat
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
 // color variables
 $color--main: #f08365;
@@ -11,12 +11,20 @@ $color--accent-3: #267b32;
 
 // font variables
 $ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
-$ff--gotham: 'gotham-condensed-bold', 'Open Sans', sans-serif;
+$ff--gotham: "gotham-condensed-bold", "Open Sans", sans-serif;
 $fw--regular: 400;
 $fw--bold: 700;
 $ft--italic: italic;
-$fs__heading--top: clamp(1.625rem, 1.4rem + 1.2vw, 2rem); // 300px-800px, 26-32px
-$fs__heading--bottom: clamp(1.75rem, 1.45rem + 1.6vw, 2.25rem); // 300px-800px, 28-36px
+$fs__heading--top: clamp(
+  1.625rem,
+  1.4rem + 1.2vw,
+  2rem
+); // 300px-800px, 26-32px
+$fs__heading--bottom: clamp(
+  1.75rem,
+  1.45rem + 1.6vw,
+  2.25rem
+); // 300px-800px, 28-36px
 $fs__body: clamp(0.875rem, 0.8rem + 0.4vw, 1rem); //14-16px
 // $txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 $txt-shadow: 4px 2px 4px $color--shadow;
@@ -80,21 +88,25 @@ $padding--XXL: 6rem;
 // animations
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $color--shadow,
+      0 0 40px $color--shadow;
   }
-  
+
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow, 0 0 50px $color--shadow;
+    text-shadow: 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow,
+      0 0 50px $color--shadow;
   }
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $color--shadow,
+      0 0 40px $color--shadow;
   }
-  
+
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow, 0 0 50px $color--shadow;
+    text-shadow: 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow,
+      0 0 50px $color--shadow;
   }
 }
 
@@ -306,6 +318,24 @@ $padding--XXL: 6rem;
       &--step {
         @include body($fw--bold, uppercase, $color--main);
       }
+    }
+  }
+  .es-video {
+    max-width: 960px;
+    min-width: 320px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    &__videoCnt {
+      width: 72%;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    &__iframe {
+      width: 100%;
+      min-height: 450px;
+      z-index: 1;
     }
   }
   .es-before-after {
