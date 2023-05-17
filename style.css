@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a66161, 0 0 40px #a66161;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #a66161, 0 0 40px #a66161, 0 0 50px #a66161;
+  }
+}
 #es-RC-container {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
   max-width: 1300px;
@@ -17,7 +26,7 @@
   height: auto;
 }
 #es-RC-container .es-hero {
-  min-height: 400px;
+  min-height: 300px;
   position: relative;
 }
 #es-RC-container .es-hero__left {
@@ -47,11 +56,11 @@
 #es-RC-container .es-hero__left--title {
   font-size: clamp(2.5rem, 2.3618rem + 0.6316vw, 2.875rem);
   min-width: 10ch;
-  text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+  text-shadow: 4px 2px 4px #a66161;
 }
 #es-RC-container .es-hero__left--subtitle {
   font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
-  text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+  text-shadow: 4px 2px 4px #a66161;
   text-align: center;
 }
 #es-RC-container .es-hero__right {
@@ -67,15 +76,17 @@
 }
 #es-RC-container .es-hero__right--headline {
   color: white;
+  font-family: "gotham-condensed-bold", "Open Sans", sans-serif;
   text-transform: uppercase;
+  text-align: center;
   font-weight: 700;
-  font-size: clamp(1.5rem, 0.8553rem + 2.9474vw, 3.25rem);
-  text-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+  font-size: 36px;
+  text-shadow: 4px 2px 4px #a66161;
   transform: rotate(355deg) skew(-5deg, 0deg);
-  max-width: 18ch;
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 1.5rem;
+  animation: glow 2s ease-in-out infinite alternate;
 }
 #es-RC-container .es-hero__middle {
   display: flex;
@@ -89,9 +100,15 @@
 }
 #es-RC-container .es-hero__middle--badge {
   max-width: 80px;
+  margin-left: 20px;
 }
 #es-RC-container .es-hero__middle--packshot {
   max-width: 270px;
+  scale: 1;
+  transition: all 200ms ease-in-out;
+}
+#es-RC-container .es-hero__middle--packshot:hover {
+  scale: 1.05;
 }
 #es-RC-container .es-benefits {
   padding: 3rem;
@@ -426,13 +443,13 @@
     justify-content: flex-end;
   }
   #es-RC-container .es-hero__left {
-    flex-basis: 35%;
+    flex-basis: 45%;
   }
   #es-RC-container .es-hero__left--subtitle {
-    padding-right: 7rem;
+    padding-right: 8rem;
   }
   #es-RC-container .es-hero__right {
-    flex-basis: 65%;
+    flex-basis: 55%;
   }
   #es-RC-container .es-hero__right--headline {
     top: unset;
@@ -441,6 +458,9 @@
   #es-RC-container .es-hero__middle {
     left: -130px;
     align-items: flex-end;
+  }
+  #es-RC-container .es-hero__middle--badge {
+    margin-right: 50px;
   }
   #es-RC-container .es-benefits__main {
     transform: translate(-50%, -50%);
@@ -460,8 +480,8 @@
   #es-RC-container .es-how__wrapper::before {
     content: url("./img/arrow-left.png");
     position: absolute;
-    left: -80px;
-    top: 80px;
+    left: -125px;
+    top: 45px;
   }
   #es-RC-container .es-use__wrapper {
     display: flex;

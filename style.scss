@@ -1,5 +1,6 @@
 // import Montserrat
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
 
 // color variables
 $color--main: #f08365;
@@ -10,13 +11,15 @@ $color--accent-3: #267b32;
 
 // font variables
 $ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+$ff--gotham: 'gotham-condensed-bold', 'Open Sans', sans-serif;
 $fw--regular: 400;
 $fw--bold: 700;
 $ft--italic: italic;
 $fs__heading--top: clamp(1.625rem, 1.4rem + 1.2vw, 2rem); // 300px-800px, 26-32px
 $fs__heading--bottom: clamp(1.75rem, 1.45rem + 1.6vw, 2.25rem); // 300px-800px, 28-36px
 $fs__body: clamp(0.875rem, 0.8rem + 0.4vw, 1rem); //14-16px
-$txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+// $txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
+$txt-shadow: 4px 2px 4px $color--shadow;
 $txt-stroke--white: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
   -1px -1px 0 #fff;
 $txt-stroke--main: -1px 1px 0 $color--main, 1px 1px 0 $color--main,
@@ -53,6 +56,7 @@ $padding--XXL: 6rem;
   color: $color;
 }
 
+//layout mixins
 @mixin flex($direction, $justify) {
   display: flex;
   flex-direction: $direction;
@@ -70,6 +74,27 @@ $padding--XXL: 6rem;
   border-radius: 8px;
   padding: $padding--L;
   padding-bottom: $padding--XXL;
+}
+
+// animations
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow, 0 0 50px $color--shadow;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px $color--shadow, 0 0 40px $color--shadow, 0 0 50px $color--shadow;
+  }
 }
 
 /////////////////////////////////////////////////////////////
@@ -94,7 +119,7 @@ $padding--XXL: 6rem;
   }
   // reset end
   .es-hero {
-    min-height: 400px;
+    min-height: 300px;
     position: relative;
     &__left {
       background-image: url("#{$file-path}bg-hero-L#{$img-format}");
@@ -133,15 +158,18 @@ $padding--XXL: 6rem;
       min-height: 500px;
       &--headline {
         color: white;
+        font-family: $ff--gotham;
         text-transform: uppercase;
+        text-align: center;
         font-weight: 700;
-        font-size: clamp(1.5rem, 0.8553rem + 2.9474vw, 3.25rem);
+        // font-size: clamp(1.5rem, 0.8553rem + 2.9474vw, 3.25rem);
+        font-size: 36px;
         text-shadow: $txt-shadow;
         transform: rotate(355deg) skew(-5deg, 0deg);
-        max-width: 18ch;
         position: absolute;
-        right: 0;
+        right: 1rem;
         top: 1.5rem;
+        animation: glow 2s ease-in-out infinite alternate;
       }
     }
     &__middle {
@@ -154,9 +182,15 @@ $padding--XXL: 6rem;
       left: 0;
       &--badge {
         max-width: 80px;
+        margin-left: 20px;
       }
       &--packshot {
         max-width: 270px;
+        scale: 1;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          scale: 1.05;
+        }
       }
     }
   }
@@ -408,13 +442,13 @@ $padding--XXL: 6rem;
     .es-hero {
       @include flex(row, flex-end);
       &__left {
-        flex-basis: 35%;
+        flex-basis: 45%;
         &--subtitle {
-          padding-right: 7rem;
+          padding-right: 8rem;
         }
       }
       &__right {
-        flex-basis: 65%;
+        flex-basis: 55%;
         &--headline {
           top: unset;
           bottom: 3rem;
@@ -423,6 +457,9 @@ $padding--XXL: 6rem;
       &__middle {
         left: -130px;
         align-items: flex-end;
+        &--badge {
+          margin-right: 50px;
+        }
       }
     }
     .es-benefits {
@@ -446,8 +483,8 @@ $padding--XXL: 6rem;
         &::before {
           content: url("#{$file-path}arrow-left#{$img-format}");
           position: absolute;
-          left: -80px;
-          top: 80px;
+          left: -125px;
+          top: 45px;
         }
       }
     }
