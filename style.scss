@@ -357,20 +357,14 @@ $padding--XXL: 6rem;
   }
   .es-routine {
     text-align: center;
-
-    &__bg {
-      background-image: url("#{$file-path}bg-routine#{$img-format}");
-      background-size: contain;
-      background-repeat: no-repeat;
-      padding-top: $padding--L;
-    }
     a {
       text-decoration: none;
       color: inherit;
     }
     &__header {
       @include heading($fs__heading--top, white);
-      padding: $padding--M;
+      background-image: url("#{$file-path}bg-routine#{$img-format}");
+      padding: $padding--L;
       & span {
         display: block;
         @include heading($fs__heading--bottom, #dc7669);
@@ -547,6 +541,15 @@ $padding--XXL: 6rem;
       }
     }
     .es-routine {
+      &__bg {
+        background-image: url("#{$file-path}bg-routine#{$img-format}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: $padding--L;
+      }
+      &__header {
+        background-image: unset;
+      }
       &__wrapper--flex {
         @include flex(row, center);
       }

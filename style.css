@@ -320,12 +320,6 @@
 #es-RC-container .es-routine {
   text-align: center;
 }
-#es-RC-container .es-routine__bg {
-  background-image: url("./img/bg-routine.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-top: 2rem;
-}
 #es-RC-container .es-routine a {
   text-decoration: none;
   color: inherit;
@@ -336,7 +330,8 @@
   text-transform: uppercase;
   font-size: clamp(1.625rem, 1.4rem + 1.2vw, 2rem);
   color: white;
-  padding: 1rem;
+  background-image: url("./img/bg-routine.png");
+  padding: 2rem;
 }
 #es-RC-container .es-routine__header span {
   display: block;
@@ -525,6 +520,15 @@
   #es-RC-container .es-use__single {
     width: 33%;
     padding: unset;
+  }
+  #es-RC-container .es-routine__bg {
+    background-image: url("./img/bg-routine.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+  }
+  #es-RC-container .es-routine__header {
+    background-image: unset;
   }
   #es-RC-container .es-routine__wrapper--flex {
     display: flex;
