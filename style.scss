@@ -88,6 +88,7 @@ $padding--XXL: 6rem;
 // button mixins
 @mixin btn--primary {
   background-color: $color--main;
+  outline: 2px solid $color--main;
   border-radius: 10px;
   padding: $padding--S;
   @include body($fw--bold, uppercase, white);
@@ -99,7 +100,6 @@ $padding--XXL: 6rem;
 }
 
 @mixin btn--primary--hover {
-  outline: 2px solid $color--main;
   background-color: white;
   color: $color--main;
 }
