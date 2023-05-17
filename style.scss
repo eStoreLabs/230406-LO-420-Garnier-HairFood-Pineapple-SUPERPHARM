@@ -242,7 +242,7 @@ $padding--XXL: 6rem;
       padding-block: $padding--XXL;
     }
     &__icon-single {
-      padding: $padding--XS;
+      padding: $padding--M $padding--XS;
       &--title {
         @include body($fw--bold, uppercase, $color--main);
         margin-top: $padding--L;
@@ -286,7 +286,7 @@ $padding--XXL: 6rem;
     }
   }
   .es-use {
-    padding: $padding--XXL $padding--XL;
+    padding-top: $padding--XXL;
     text-align: center;
     &__container {
       @include border($color--main);

@@ -160,7 +160,7 @@
   padding-block: 6rem;
 }
 #es-RC-container .es-benefits__icon-single {
-  padding: 0.2rem;
+  padding: 1rem 0.2rem;
 }
 #es-RC-container .es-benefits__icon-single--title {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
@@ -225,7 +225,7 @@
   color: white;
 }
 #es-RC-container .es-use {
-  padding: 6rem 3rem;
+  padding-top: 6rem;
   text-align: center;
 }
 #es-RC-container .es-use__container {
