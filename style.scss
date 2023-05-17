@@ -168,80 +168,96 @@ $padding--XXL: 6rem;
   }
   // reset end
   .es-hero {
-    min-height: 300px;
+    //min-height: 300px;
     position: relative;
+    //background-image: url("#{$file-path}bg-juicy-pineapple#{$img-format}");
+    //@include bg-cover(right bottom);
+    @include flex(column-reverse, center);
     &__left {
-      background-image: url("#{$file-path}bg-hero-L#{$img-format}");
-      @include bg-cover(left bottom);
-      @include flex(column, center);
-      color: white;
-      text-transform: uppercase;
-      font-weight: $fw--bold;
-      padding: $padding--M;
-      &--logo {
-        max-width: 200px;
-        margin-inline: auto;
-      }
-      &--new {
-        background-color: $color--accent-1;
-        max-width: fit-content;
-        padding: 0.2rem;
-        transform: rotate(355deg) skew(-5deg, 0deg);
-      }
-      &--title {
-        font-size: clamp(2.5rem, 2.3618rem + 0.6316vw, 2.875rem);
-        min-width: 10ch;
-        text-shadow: $txt-shadow;
-      }
-      &--subtitle {
-        font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
-        text-shadow: $txt-shadow;
-        text-align: center;
-      }
-    }
-    &__right {
-      background-image: url("#{$file-path}bg-hero-R#{$img-format}");
-      @include bg-cover(right bottom);
+      background-image: url("#{$file-path}bg-hero-desktop#{$img-format}");
+      @include bg-cover(left);
+      min-height: 300px;
       @include flex(column, flex-end);
-      position: relative;
-      min-height: 500px;
+      
       &--headline {
         color: white;
         font-family: $ff--gotham;
         text-transform: uppercase;
         text-align: center;
         font-weight: 700;
+        line-height: 0.9;
         // font-size: clamp(1.5rem, 0.8553rem + 2.9474vw, 3.25rem);
         font-size: 36px;
         text-shadow: $txt-shadow;
         transform: rotate(355deg) skew(-5deg, 0deg);
-        position: absolute;
-        right: 1rem;
-        top: 1.5rem;
-        animation: glow 2s ease-in-out infinite alternate;
+        & span {
+          animation: glow 2s ease-in-out infinite alternate;
+        }
+      }
+      &--smaller {
+        font-size: 16px;
+        margin-top: 4px;
+        margin-bottom: 50px;
       }
     }
-    &__middle {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      max-width: fit-content;
-      position: absolute;
-      bottom: 0;
-      left: 0;
+
+    &__right {
+      background-image: url("#{$file-path}bg-R-juicy-pineapple#{$img-format}");
+      @include bg-cover(right);
+      @include flex(column, center);
+      color: white;
+      text-transform: uppercase;
+      font-weight: $fw--bold;
+      &--logo {
+        max-width: 300px;
+        margin-inline: auto;
+        padding: $padding--M;
+      }
+      &--container {
+        @include flex(column, center);
+        margin-left: auto;
+        position: relative;
+        padding-left: $padding--XL;
+        padding-bottom: $padding--S;
+      }
+      &--new {
+        background-color: $color--accent-1;
+        max-width: fit-content;
+        padding: 0.2rem;
+        transform: rotate(355deg) skew(-5deg, 0deg);
+        font-family: $ff--gotham;
+        position: absolute;
+        top: 0px;
+        left: 110px;
+      }
       &--badge {
         max-width: 80px;
-        margin-left: 20px;
+        position: absolute;
+        z-index: 1;
+        top: 84px;
+        left: 8px;
       }
       &--packshot {
-        max-width: 270px;
+        max-width: 300px;
         scale: 1;
         transition: all 200ms ease-in-out;
         &:hover {
           scale: 1.05;
         }
       }
+      // &--title {
+      //   font-size: clamp(2.5rem, 2.3618rem + 0.6316vw, 2.875rem);
+      //   min-width: 10ch;
+      //   text-shadow: $txt-shadow;
+      // }
+      // &--subtitle {
+      //   font-size: clamp(1.125rem, 1.0789rem + 0.2105vw, 1.25rem);
+      //   text-shadow: $txt-shadow;
+      //   text-align: center;
+      // }
     }
+    
+   
   }
   .es-benefits {
     padding: $padding--XL;
@@ -562,15 +578,15 @@ $padding--XXL: 6rem;
 @media screen and (min-width: 601px) {
   #es-RC-container {
     .es-hero {
-      @include flex(row, flex-end);
+      @include flex(row, space-evenly);
+      @include bg-cover(center);
+      background-image: url("#{$file-path}bg-hero-desktop#{$img-format}");
       &__left {
-        flex-basis: 45%;
-        &--subtitle {
-          padding-right: 8rem;
-        }
+        background-image: none;
       }
+      
       &__right {
-        flex-basis: 55%;
+        background-image: none;
         &--headline {
           top: unset;
           bottom: 3rem;
