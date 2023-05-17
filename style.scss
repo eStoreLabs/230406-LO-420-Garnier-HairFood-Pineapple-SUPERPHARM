@@ -33,6 +33,7 @@ $file-path: "./img/";
 $img-format: ".png";
 
 // padding
+$padding--XS: 0.2rem;
 $padding--S: 0.5rem;
 $padding--M: 1rem;
 $padding--L: 2rem;
@@ -229,13 +230,20 @@ $padding--XXL: 6rem;
       padding-block: $padding--XXL;
     }
     &__icon-single {
-      padding: $padding--M;
+      padding: $padding--XS;
       &--title {
         @include body($fw--bold, uppercase, $color--main);
         margin-top: $padding--L;
       }
       &--descr {
         @include body($fw--regular, unset, black);
+      }
+      img {
+        scale: 1;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          scale: 1.05;
+        }
       }
     }
   }

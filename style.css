@@ -160,7 +160,7 @@
   padding-block: 6rem;
 }
 #es-RC-container .es-benefits__icon-single {
-  padding: 1rem;
+  padding: 0.2rem;
 }
 #es-RC-container .es-benefits__icon-single--title {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
@@ -176,6 +176,13 @@
   font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
   text-transform: unset;
   color: black;
+}
+#es-RC-container .es-benefits__icon-single img {
+  scale: 1;
+  transition: all 200ms ease-in-out;
+}
+#es-RC-container .es-benefits__icon-single img:hover {
+  scale: 1.05;
 }
 #es-RC-container .es-how {
   background-image: url("./img/bg-hair.png");
