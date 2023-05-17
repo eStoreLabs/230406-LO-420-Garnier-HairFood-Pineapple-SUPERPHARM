@@ -85,6 +85,24 @@ $padding--XXL: 6rem;
   padding-bottom: $padding--XXL;
 }
 
+@mixin btn--primary {
+  background-color: $color--main;
+  border-radius: 10px;
+  padding: $padding--S;
+  @include body($fw--bold, uppercase, white);
+  text-decoration: none;
+  margin: auto;
+  width: 150px;
+  margin-top: $padding--S;
+  transition: .4s ease-in-out;
+}
+
+@mixin btn--primary--hover {
+  outline: 2px solid $color--main;
+  background-color: white;
+  color: $color--main;
+}
+
 // animations
 @-webkit-keyframes glow {
   from {
@@ -314,13 +332,12 @@ $padding--XXL: 6rem;
       margin-inline: auto;
       &--img {
         margin-bottom: $padding--S;
-        
-          scale: 1;
-          transition: all 200ms ease-in-out;
-          &:hover {
-            scale: 1.05;
-          }
-        
+
+        scale: 1;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          scale: 1.05;
+        }
       }
       &--step {
         @include body($fw--bold, uppercase, $color--main);
@@ -357,10 +374,10 @@ $padding--XXL: 6rem;
   }
   .es-routine {
     text-align: center;
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    // a {
+    //   text-decoration: none;
+    //   color: inherit;
+    // }
     &__header {
       @include heading($fs__heading--top, white);
       background-image: url("#{$file-path}bg-routine#{$img-format}");
@@ -384,6 +401,15 @@ $padding--XXL: 6rem;
       gap: $padding--M;
       margin-top: $padding--L;
       position: relative;
+    }
+    &__img {
+      @include flex(column, center);
+    }
+    &__button {
+      @include btn--primary;
+      &:hover {
+        @include btn--primary--hover;
+      }
     }
     &__descr {
       max-width: 30ch;
@@ -549,6 +575,7 @@ $padding--XXL: 6rem;
       }
       &__header {
         background-image: unset;
+        padding: unset;
       }
       &__wrapper--flex {
         @include flex(row, center);
