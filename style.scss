@@ -314,6 +314,13 @@ $padding--XXL: 6rem;
       margin-inline: auto;
       &--img {
         margin-bottom: $padding--S;
+        
+          scale: 1;
+          transition: all 200ms ease-in-out;
+          &:hover {
+            scale: 1.05;
+          }
+        
       }
       &--step {
         @include body($fw--bold, uppercase, $color--main);
