@@ -512,51 +512,61 @@ $padding--XXL: 6rem;
       margin-bottom: $padding--L;
       & span {
         font-size: $fs__heading--bottom;
+        display: block;
         color: white;
         text-shadow: $txt-stroke--main;
       }
     }
     &__single {
       margin-bottom: $padding--XL;
+      position: relative;
+      &:hover {
+        img {
+          scale: 1.05;
+          transition: 200ms ease-in;
+        }
+        .es-cross__figcaption--1 a {
+          @include btn--secondary--hover(#561312);
+        }
+        .es-cross__figcaption--2 a {
+          @include btn--secondary--hover(#ffc317);
+        }
+        .es-cross__figcaption--3 a {
+          @include btn--secondary--hover(#e6772a);
+        }
+      }
     }
     &__img-container {
       overflow: hidden;
       max-width: 300px;
-      margin: auto;
+      margin: 0 auto $padding--L auto;
       img {
         scale: 1;
-        transition: all 200ms ease-in;
-        &:hover {
-          scale: 1.05;
-        }
       }
     }
-
+    &__figcaption--inside {
+      position: absolute;
+      width: 200px;
+      top: $padding--L;
+      left: 50%;
+    transform: translate(-50%, 0);
+    }
     &__figcaption--1 {
-      color: #f08365;
+      color: #561312;
       & a {
-        @include btn--secondary(#f08365);
-        &:hover {
-          @include btn--secondary--hover(#f08365);
-        }
+        @include btn--secondary(#561312);
       }
     }
     &__figcaption--2 {
-      color: #ff9231;
+      color: #c24e2d;
       & a {
-        @include btn--secondary(#ff9231);
-        &:hover {
-          @include btn--secondary--hover(#ff9231);
-        }
+        @include btn--secondary(#ffc317);
       }
     }
     &__figcaption--3 {
-      color: #ffc317;
+      color: white;
       & a {
-        @include btn--secondary(#ffc317);
-        &:hover {
-          @include btn--secondary--hover(#ffc317);
-        }
+        @include btn--secondary(#e6772a);
       }
     }
 
@@ -569,10 +579,7 @@ $padding--XXL: 6rem;
       @include body($fw--bold, uppercase, inherit);
       margin-bottom: $padding--M;
     }
-    &__descr {
-      color: black;
-      margin-bottom: $padding--L;
-    }
+    
   }
   .es-disclaimer {
     text-align: center;
@@ -673,28 +680,7 @@ $padding--XXL: 6rem;
       }
     }
     
-    .es-cross {
-      &__wrapper--flex {
-        @include flex(row, center);
-      }
-      &__single {
-        width: 30%;
-
-        img {
-          width: 100%;
-        }
-      }
-      &__title {
-        font-size: x-large;
-      }
-      &__subtitle {
-        height: 3rem;
-        font-size: small;
-      }
-      &__descr {
-        height: 2rem;
-      }
-    }
+    
     .es-footer {
       img {
         max-width: 50%;
@@ -757,6 +743,18 @@ $padding--XXL: 6rem;
       }
     }
   }
+  .es-cross {
+      &__wrapper--flex {
+        @include flex(row, center);
+      }
+      &__single {
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+      
+    }
 }
 
 @media screen and (min-width: 730px) {

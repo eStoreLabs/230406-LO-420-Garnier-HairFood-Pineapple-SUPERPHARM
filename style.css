@@ -478,72 +478,67 @@
 }
 #es-RC-container .es-cross__header span {
   font-size: clamp(1.75rem, 1.45rem + 1.6vw, 2.25rem);
+  display: block;
   color: white;
   text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
 }
 #es-RC-container .es-cross__single {
   margin-bottom: 3rem;
+  position: relative;
+}
+#es-RC-container .es-cross__single:hover img {
+  scale: 1.05;
+  transition: 200ms ease-in;
+}
+#es-RC-container .es-cross__single:hover .es-cross__figcaption--1 a {
+  background-color: #561312;
+  color: white;
+}
+#es-RC-container .es-cross__single:hover .es-cross__figcaption--2 a {
+  background-color: #ffc317;
+  color: white;
+}
+#es-RC-container .es-cross__single:hover .es-cross__figcaption--3 a {
+  background-color: #e6772a;
+  color: white;
 }
 #es-RC-container .es-cross__img-container {
   overflow: hidden;
   max-width: 300px;
-  margin: auto;
+  margin: 0 auto 2rem auto;
 }
 #es-RC-container .es-cross__img-container img {
   scale: 1;
-  transition: all 200ms ease-in;
 }
-#es-RC-container .es-cross__img-container img:hover {
-  scale: 1.05;
+#es-RC-container .es-cross__figcaption--inside {
+  position: absolute;
+  width: 200px;
+  top: 2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 #es-RC-container .es-cross__figcaption--1 {
-  color: #f08365;
+  color: #561312;
 }
 #es-RC-container .es-cross__figcaption--1 a {
   border-radius: 10px;
-  outline: 2px solid #f08365;
+  outline: 2px solid #561312;
   padding: 1rem;
   text-decoration: none;
-  color: #f08365;
+  color: #561312;
   width: 300px;
   text-align: center;
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
   font-weight: 700;
   font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
   text-transform: uppercase;
-  color: #f08365;
+  color: #561312;
   transition: 0.4s ease-in-out;
-}
-#es-RC-container .es-cross__figcaption--1 a:hover {
-  background-color: #f08365;
-  color: white;
 }
 #es-RC-container .es-cross__figcaption--2 {
-  color: #ff9231;
+  color: #c24e2d;
 }
 #es-RC-container .es-cross__figcaption--2 a {
-  border-radius: 10px;
-  outline: 2px solid #ff9231;
-  padding: 1rem;
-  text-decoration: none;
-  color: #ff9231;
-  width: 300px;
-  text-align: center;
-  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
-  font-weight: 700;
-  font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
-  text-transform: uppercase;
-  color: #ff9231;
-  transition: 0.4s ease-in-out;
-}
-#es-RC-container .es-cross__figcaption--2 a:hover {
-  background-color: #ff9231;
-  color: white;
-}
-#es-RC-container .es-cross__figcaption--3 {
-  color: #ffc317;
-}
-#es-RC-container .es-cross__figcaption--3 a {
   border-radius: 10px;
   outline: 2px solid #ffc317;
   padding: 1rem;
@@ -558,9 +553,23 @@
   color: #ffc317;
   transition: 0.4s ease-in-out;
 }
-#es-RC-container .es-cross__figcaption--3 a:hover {
-  background-color: #ffc317;
+#es-RC-container .es-cross__figcaption--3 {
   color: white;
+}
+#es-RC-container .es-cross__figcaption--3 a {
+  border-radius: 10px;
+  outline: 2px solid #e6772a;
+  padding: 1rem;
+  text-decoration: none;
+  color: #e6772a;
+  width: 300px;
+  text-align: center;
+  font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+  text-transform: uppercase;
+  color: #e6772a;
+  transition: 0.4s ease-in-out;
 }
 #es-RC-container .es-cross__title {
   font-size: clamp(1.75rem, 1.45rem + 1.6vw, 2.25rem);
@@ -574,10 +583,6 @@
   text-transform: uppercase;
   color: inherit;
   margin-bottom: 1rem;
-}
-#es-RC-container .es-cross__descr {
-  color: black;
-  margin-bottom: 2rem;
 }
 #es-RC-container .es-disclaimer {
   text-align: center;
@@ -678,27 +683,6 @@
     scale: 0.7;
     left: -55%;
   }
-  #es-RC-container .es-cross__wrapper--flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  #es-RC-container .es-cross__single {
-    width: 30%;
-  }
-  #es-RC-container .es-cross__single img {
-    width: 100%;
-  }
-  #es-RC-container .es-cross__title {
-    font-size: x-large;
-  }
-  #es-RC-container .es-cross__subtitle {
-    height: 3rem;
-    font-size: small;
-  }
-  #es-RC-container .es-cross__descr {
-    height: 2rem;
-  }
   #es-RC-container .es-footer img {
     max-width: 50%;
   }
@@ -753,6 +737,17 @@
   }
   #es-RC-container .es-routine__wrapper-border {
     margin-top: -100px;
+  }
+  .es-cross__wrapper--flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .es-cross__single {
+    width: 30%;
+  }
+  .es-cross__single img {
+    width: 100%;
   }
 }
 @media screen and (min-width: 730px) {
