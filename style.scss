@@ -25,7 +25,6 @@ $fs__heading--bottom: clamp(
   2.25rem
 ); // 300px-800px, 28-36px
 $fs__body: clamp(0.875rem, 0.8rem + 0.4vw, 1rem); //14-16px
-// $txt-shadow: 4px 2px 4px rgba(166, 97, 97, 0.3);
 $txt-shadow: 4px 2px 4px $color--shadow;
 $txt-stroke--white: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff,
   -1px -1px 0 #fff;
@@ -152,7 +151,7 @@ $padding--XXL: 6rem;
   font-family: $ff--montserrat;
   max-width: 999px;
   margin: auto;
-  //reset
+  //reset start
   *,
   *:before,
   *:after {
@@ -384,7 +383,6 @@ $padding--XXL: 6rem;
     }
     &__border {
       @include border($color--main);
-      //height: 100px;
       width: 90%;
       position: absolute;
       margin-top: $padding--L;
@@ -494,13 +492,11 @@ $padding--XXL: 6rem;
         color: white;
         text-shadow: $txt-stroke--accent;
         font-size: $fs__heading--bottom;
-        //margin-bottom: 300px;
       }
     }
   }
   .es-cross {
     padding: $padding--XL;
-    //padding-top: $padding--XXL;
     text-align: center;
     &__header {
       @include heading($fs__heading--top, $color--main);
