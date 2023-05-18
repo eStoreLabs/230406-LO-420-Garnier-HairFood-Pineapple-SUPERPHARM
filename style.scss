@@ -357,7 +357,7 @@ $padding--XXL: 6rem;
       }
     }
     &__img {
-      margin-bottom: -$padding--XXL;
+      margin-bottom: -$padding--XL;
     }
     &__single {
       margin-block: $padding--M;
@@ -412,7 +412,7 @@ $padding--XXL: 6rem;
   
   .es-routine {
     text-align: center;
-    
+    margin-bottom: 200px;
     &__header {
       @include heading($fs__heading--top, white);
       background-image: url("#{$file-path}bg-routine#{$img-format}");
@@ -495,17 +495,18 @@ $padding--XXL: 6rem;
     }
     &__header--wrapper {
       @include heading($fs__heading--top, $color--accent-2);
-
       & span {
         display: block;
         color: white;
         text-shadow: $txt-stroke--accent;
         font-size: $fs__heading--bottom;
+        //margin-bottom: 300px;
       }
     }
   }
   .es-cross {
     padding: $padding--XL;
+    //padding-top: $padding--XXL;
     text-align: center;
     &__header {
       @include heading($fs__heading--top, $color--main);
@@ -670,6 +671,7 @@ $padding--XXL: 6rem;
         width: 60%;
         max-width: 450px;
         height: auto;
+        margin-bottom: -$padding--XXL;
       }
       &__single:nth-of-type(1)::before {
         content: url("#{$file-path}arrow-black#{$img-format}");
@@ -679,7 +681,9 @@ $padding--XXL: 6rem;
         left: -55%;
       }
     }
-    
+    .es-routine {
+      margin-bottom: -10px;
+    }
     
     .es-footer {
       img {
@@ -692,6 +696,7 @@ $padding--XXL: 6rem;
 @media screen and (min-width: 680px) {
   #es-RC-container {
 .es-routine {
+  margin-bottom: -80px;
       &__bg {
         background-image: url("#{$file-path}bg-routine#{$img-format}");
         background-size: contain;

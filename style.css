@@ -275,7 +275,7 @@
   text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
 }
 #es-RC-container .es-ingredients__img {
-  margin-bottom: -6rem;
+  margin-bottom: -3rem;
 }
 #es-RC-container .es-ingredients__single {
   margin-block: 1rem;
@@ -342,6 +342,7 @@
 }
 #es-RC-container .es-routine {
   text-align: center;
+  margin-bottom: 200px;
 }
 #es-RC-container .es-routine__header {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
@@ -675,6 +676,7 @@
     width: 60%;
     max-width: 450px;
     height: auto;
+    margin-bottom: -6rem;
   }
   #es-RC-container .es-ingredients__single:nth-of-type(1)::before {
     content: url("./img/arrow-black.png");
@@ -683,11 +685,17 @@
     scale: 0.7;
     left: -55%;
   }
+  #es-RC-container .es-routine {
+    margin-bottom: -10px;
+  }
   #es-RC-container .es-footer img {
     max-width: 50%;
   }
 }
 @media screen and (min-width: 680px) {
+  #es-RC-container .es-routine {
+    margin-bottom: -80px;
+  }
   #es-RC-container .es-routine__bg {
     background-image: url("./img/bg-routine.png");
     background-size: contain;
