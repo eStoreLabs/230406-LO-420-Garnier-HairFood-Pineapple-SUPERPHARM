@@ -412,10 +412,7 @@ $padding--XXL: 6rem;
   
   .es-routine {
     text-align: center;
-    // a {
-    //   text-decoration: none;
-    //   color: inherit;
-    // }
+    
     &__header {
       @include heading($fs__heading--top, white);
       background-image: url("#{$file-path}bg-routine#{$img-format}");
@@ -439,12 +436,25 @@ $padding--XXL: 6rem;
       gap: $padding--M;
       margin-top: $padding--L;
       position: relative;
+      
+      &:hover {
+        img {
+          scale: 1.05;
+          transition: 200ms ease-in;
+        }
+        a {
+          @include btn--primary--hover;
+        }
+      }
     }
     &__img {
       @include flex(column, center);
+      scale: 1.0;
+      
     }
     &__button {
       @include btn--primary;
+      margin-bottom: $padding--L;
       &:hover {
         @include btn--primary--hover;
       }
@@ -457,7 +467,7 @@ $padding--XXL: 6rem;
     }
     &__wrapper--border {
       margin-inline: $padding--XL;
-      margin-top: -70px;
+      margin-top: -130px;
       margin-bottom: 160px;
       @include border($color--accent-2);
       padding-bottom: unset;
@@ -662,45 +672,7 @@ $padding--XXL: 6rem;
         left: -55%;
       }
     }
-    .es-routine {
-      &__bg {
-        background-image: url("#{$file-path}bg-routine#{$img-format}");
-        background-size: contain;
-        background-repeat: no-repeat;
-        padding-top: $padding--L;
-      }
-      &__header {
-        background-image: unset;
-        padding: unset;
-      }
-      &__wrapper--flex {
-        @include flex(row, center);
-      }
-      &__header--S {
-        color: white;
-      }
-
-      &__arrow {
-        visibility: visible;
-        max-width: 30%;
-        transform: rotate(90deg) scaleX(-1);
-        &--1 {
-          position: absolute;
-          top: 100px;
-          left: 0;
-        }
-        &--2 {
-          position: absolute;
-          top: 100px;
-        }
-        &--3 {
-          transform: rotate(270deg);
-          position: absolute;
-          top: 100px;
-          right: 0;
-        }
-      }
-    }
+    
     .es-cross {
       &__wrapper--flex {
         @include flex(row, center);
@@ -726,6 +698,62 @@ $padding--XXL: 6rem;
     .es-footer {
       img {
         max-width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 680px) {
+  #es-RC-container {
+.es-routine {
+      &__bg {
+        background-image: url("#{$file-path}bg-routine#{$img-format}");
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: $padding--L;
+      }
+      &__header {
+        background-image: unset;
+        padding: unset;
+      }
+      &__wrapper--flex {
+        @include flex(row, center);
+      }
+      &__single {
+        flex-basis: 23%;
+      }
+      &__header--S {
+        color: white;
+      }
+
+      &__arrow {
+        visibility: visible;
+        max-width: 40%;
+        position: absolute;
+        transform: rotate(270deg);
+        &--1 {
+          top: 100px;
+          left: 0;
+        }
+        &--2 {
+          top: 190px;
+          transform: scaleX(-1);
+          rotate: 90deg;
+        }
+        &--3 {
+          top: 100px;
+          left: -10px;
+        }
+        &--4 {
+          transform: scaleX(-1);
+          rotate: 90deg;
+          max-width: 35%;
+          top: 90px;
+          right: 20px;
+        }
+      }
+      &__wrapper-border {
+        margin-top: -100px;
       }
     }
   }
@@ -792,5 +820,7 @@ $padding--XXL: 6rem;
         }
       }
     }
+    
   }
 }
+
