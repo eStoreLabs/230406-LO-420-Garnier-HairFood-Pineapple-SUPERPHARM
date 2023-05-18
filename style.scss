@@ -1,5 +1,5 @@
 // import Montserrat and Barlow Condensed
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Montserrat:wght@400;700&display=swap");
 
 // color variables
 $color--main: #f08365;
@@ -10,7 +10,7 @@ $color--accent-3: #267b32;
 
 // font variables
 $ff--montserrat: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
-$ff--barlow: 'Barlow Condensed', "Helvetica", sans-serif;
+$ff--barlow: "Barlow Condensed", "Helvetica", sans-serif;
 $fw--regular: 400;
 $fw--bold: 700;
 $ft--italic: italic;
@@ -397,7 +397,6 @@ $padding--XXL: 6rem;
       width: 72%;
       margin: 0 auto;
       padding: 40px 0;
-      
     }
     &__iframe {
       width: 100%;
@@ -405,7 +404,7 @@ $padding--XXL: 6rem;
       z-index: 1;
     }
   }
-  
+
   .es-routine {
     text-align: center;
     margin-bottom: 200px;
@@ -432,7 +431,7 @@ $padding--XXL: 6rem;
       gap: $padding--M;
       margin-top: $padding--L;
       position: relative;
-      
+
       &:hover {
         img {
           scale: 1.05;
@@ -445,8 +444,7 @@ $padding--XXL: 6rem;
     }
     &__img {
       @include flex(column, center);
-      scale: 1.0;
-      
+      scale: 1;
     }
     &__button {
       @include btn--primary;
@@ -546,7 +544,7 @@ $padding--XXL: 6rem;
       width: 200px;
       top: $padding--L;
       left: 50%;
-    transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
     }
     &__figcaption--1 {
       color: #561312;
@@ -576,7 +574,6 @@ $padding--XXL: 6rem;
       @include body($fw--bold, uppercase, inherit);
       margin-bottom: $padding--M;
     }
-    
   }
   .es-disclaimer {
     text-align: center;
@@ -680,7 +677,7 @@ $padding--XXL: 6rem;
     .es-routine {
       margin-bottom: -10px;
     }
-    
+
     .es-footer {
       img {
         max-width: 50%;
@@ -691,8 +688,8 @@ $padding--XXL: 6rem;
 
 @media screen and (min-width: 680px) {
   #es-RC-container {
-.es-routine {
-  margin-bottom: -80px;
+    .es-routine {
+      margin-bottom: -80px;
       &__bg {
         background-image: url("#{$file-path}bg-routine#{$img-format}");
         background-size: contain;
@@ -745,17 +742,16 @@ $padding--XXL: 6rem;
     }
   }
   .es-cross {
-      &__wrapper--flex {
-        @include flex(row, center);
-      }
-      &__single {
-        width: 30%;
-        img {
-          width: 100%;
-        }
-      }
-      
+    &__wrapper--flex {
+      @include flex(row, center);
     }
+    &__single {
+      width: 30%;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 730px) {
@@ -819,7 +815,5 @@ $padding--XXL: 6rem;
         }
       }
     }
-    
   }
 }
-
