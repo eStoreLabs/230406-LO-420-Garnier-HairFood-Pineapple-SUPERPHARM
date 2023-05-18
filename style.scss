@@ -373,10 +373,35 @@ $padding--XXL: 6rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    position: relative;
+    &__title {
+      @include heading($fs__heading--top, $color--main);
+      margin-inline: auto;
+      margin-top: $padding--L;
+      text-align: center;
+      width: fit-content;
+      & span {
+        display: block;
+        @include heading($fs__heading--bottom, white);
+        text-shadow: $txt-stroke--main;
+      }
+    }
+    &__border {
+      @include border($color--main);
+      //height: 100px;
+      width: 90%;
+      position: absolute;
+      margin-top: $padding--L;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
     &__videoCnt {
       width: 72%;
       margin: 0 auto;
       padding: 40px 0;
+      
     }
     &__iframe {
       width: 100%;
@@ -637,7 +662,6 @@ $padding--XXL: 6rem;
         width: 60%;
         max-width: 450px;
         height: auto;
-        
       }
       &__single:nth-of-type(1)::before {
         content: url("#{$file-path}arrow-black#{$img-format}");
@@ -646,7 +670,6 @@ $padding--XXL: 6rem;
         scale: 0.7;
         left: -55%;
       }
-      
     }
     .es-routine {
       &__bg {
