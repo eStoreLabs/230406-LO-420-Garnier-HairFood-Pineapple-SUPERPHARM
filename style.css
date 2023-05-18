@@ -274,8 +274,11 @@
   color: white;
   text-shadow: -1px 1px 0 #f08365, 1px 1px 0 #f08365, 1px -1px 0 #f08365, -1px -1px 0 #f08365;
 }
+#es-RC-container .es-ingredients__img {
+  margin-bottom: -6rem;
+}
 #es-RC-container .es-ingredients__single {
-  outline: 1px solid red;
+  margin-block: 1rem;
 }
 #es-RC-container .es-ingredients__single--title {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
@@ -283,11 +286,6 @@
   font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
   text-transform: uppercase;
   color: #f08365;
-}
-#es-RC-container .es-ingredients__wrapper {
-  margin-top: -60px;
-  -webkit-backdrop-filter: opacity(100%);
-          backdrop-filter: opacity(100%);
 }
 #es-RC-container .es-video {
   max-width: 960px;
@@ -619,10 +617,39 @@
   #es-RC-container .es-benefits__icon-single--descr {
     font-size: 12px;
   }
-  #es-RC-container .es-ingredients__wrapper {
+  #es-RC-container .es-ingredients__container--inner {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  #es-RC-container .es-ingredients__container--inner figcaption {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 1rem;
+    position: relative;
+  }
+  #es-RC-container .es-ingredients__container--inner::after {
+    content: url("./img/arrow-black.png");
+    display: block;
+    position: absolute;
+    scale: 0.6;
+    transform: scaleX(-1);
+    bottom: -120px;
+    right: 25%;
+  }
+  #es-RC-container .es-ingredients__img {
+    width: 60%;
+    max-width: 450px;
+    height: auto;
+  }
+  #es-RC-container .es-ingredients__single:nth-of-type(1)::before {
+    content: url("./img/arrow-black.png");
+    display: block;
+    position: absolute;
+    scale: 0.7;
+    left: -55%;
   }
   #es-RC-container .es-routine__bg {
     background-image: url("./img/bg-routine.png");
