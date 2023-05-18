@@ -409,16 +409,7 @@ $padding--XXL: 6rem;
       z-index: 1;
     }
   }
-  .es-before-after {
-    background-image: url("#{$file-path}bg-before-after#{$img-format}");
-    @include bg-cover(center);
-    @include flex(row, space-between);
-    @include heading($fw--bold, white);
-    font-size: $fs__body;
-    padding: $padding--L;
-    margin-block: $padding--XL;
-    min-height: 300px;
-  }
+  
   .es-routine {
     text-align: center;
     // a {
