@@ -149,7 +149,7 @@ $padding--XXL: 6rem;
 
 #es-RC-container {
   font-family: $ff--montserrat;
-  max-width: 999px;
+  max-width: 769px;
   margin: auto;
   //reset start
   *,
@@ -189,7 +189,7 @@ $padding--XXL: 6rem;
         }
       }
       &--smaller {
-        font-size: clamp(1.5rem, 1.3125rem + 1vw, 2.125rem);
+        font-size: clamp(1.5rem, 1.3125rem + 1vw, 1.8rem);
         margin-top: 4px;
         margin-bottom: 50px;
       }

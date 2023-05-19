@@ -9,7 +9,7 @@
 }
 #es-RC-container {
   font-family: "Montserrat", "DejaVu Sans", "Verdana", sans-serif;
-  max-width: 999px;
+  max-width: 769px;
   margin: auto;
 }
 #es-RC-container *,
@@ -55,7 +55,7 @@
   animation: glow 2s ease-in-out infinite alternate;
 }
 #es-RC-container .es-hero__left--smaller {
-  font-size: clamp(1.5rem, 1.3125rem + 1vw, 2.125rem);
+  font-size: clamp(1.5rem, 1.3125rem + 1vw, 1.8rem);
   margin-top: 4px;
   margin-bottom: 50px;
 }
