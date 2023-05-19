@@ -340,6 +340,10 @@
   min-height: 450px;
   z-index: 1;
 }
+#es-RC-container .es-video #es-video__player {
+  max-width: 100%;
+  display: block;
+}
 #es-RC-container .es-routine {
   text-align: center;
   margin-bottom: 200px;

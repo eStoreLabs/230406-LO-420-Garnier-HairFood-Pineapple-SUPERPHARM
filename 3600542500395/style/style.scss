@@ -401,6 +401,10 @@ $padding--XXL: 6rem;
       min-height: 450px;
       z-index: 1;
     }
+    #es-video__player {
+      max-width: 100%;
+      display: block;
+    }
   }
 
   .es-routine {
